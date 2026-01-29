@@ -109,11 +109,20 @@ The `canvas-html-explorations/` folder contains:
 
 **Purpose**: The full lesson preview allows you to see how systematic CSS development applies to real Canvas content. As we build typography, callouts, and interactive components incrementally, you can immediately see the visual progress within an authentic educational context rather than just isolated test snippets.
 
+**⚠️ CRITICAL: Structural Fidelity Requirement**
+When updating preview files, maintain **EXACT structural fidelity** to the original Canvas lesson:
+- Copy HTML structure directly from `M1L1_Stars.html` without modifications
+- Preserve all class names, element nesting, and content organization
+- Do NOT substitute components (e.g., don't change accordions to callouts)
+- The goal is Canvas copy-paste compatibility, not improvement
+- Any structural changes break the accurate Canvas replication objective
+
 **Workflow**: 
 1. Develop focused CSS in systematic chunks (containers → typography → components)
 2. Test in isolated test pages for accuracy
 3. Validate in full lesson preview for real-world context
 4. Compare with Canvas screenshots for visual matching
+5. **Verify preview maintains exact original Canvas lesson structure**
 
 ### Development Setup
 ```bash
@@ -216,9 +225,31 @@ Based on Canvas lesson analysis, building key interactive components:
   - [x] JavaScript functionality with smooth transitions
 
 **Next Components:**
-- [ ] Image galleries and figures
-- [ ] Advanced form elements
-- [ ] Modal dialogs and overlays
+- [x] Image galleries and figures
+- [x] Advanced form elements - Interactive components (dp-flip-card, dp-si-sort, etc.) handled in separate CidiLabs Activities project
+- [x] Modal dialogs and overlays - dp-popup-image system implemented (primary Canvas overlay functionality)
+
+### Phase 3: Polish & Enhancement (Planning)
+Finalizing the Canvas replication environment with enhanced features:
+
+**Phase 3 Components:**
+- [ ] **dp-embed-wrapper system** - Responsive video/iframe containers
+- [ ] **dp-shadow variants** - Enhanced card shadow effects (dp-shadow-r2, etc.)
+- [ ] **Color palette utilities** - Background colors, borders, text colors
+- [ ] **Enhanced typography** - Additional text styling classes
+- [ ] **Performance optimization** - CSS minification and organization
+- [ ] **Documentation completion** - Comprehensive style guide and usage examples - dp-popup-image system implemented (primary Canvas overlay functionality)
+
+### Phase 3: Polish & Enhancement (Planning)
+Finalizing the Canvas replication environment with enhanced features:
+
+**Phase 3 Components:**
+- [ ] **dp-embed-wrapper system** - Responsive video/iframe containers
+- [ ] **dp-shadow variants** - Enhanced card shadow effects (dp-shadow-r2, etc.)
+- [ ] **Color palette utilities** - Background colors, borders, text colors
+- [ ] **Enhanced typography** - Additional text styling classes
+- [ ] **Performance optimization** - CSS minification and organization
+- [ ] **Documentation completion** - Comprehensive style guide and usage examples
 
 ## Goals & Success Metrics
 

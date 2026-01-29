@@ -78,10 +78,71 @@ function initializeDpPanels() {
    ================================ */
 /* CidiLabs initialization and Canvas integration functions */
 
+// dp-popup-image functionality - Click to enlarge
+function initializeDpPopupImages() {
+    const popupImages = document.querySelectorAll('.dp-popup-image');
+
+    popupImages.forEach(img => {
+        img.addEventListener('click', function () {
+            createImagePopup(this);
+        });
+    });
+}
+
+function createImagePopup(img) {
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'dp-popup-overlay';
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+    `;
+
+    // Create enlarged image
+    const enlargedImg = document.createElement('img');
+    enlargedImg.src = img.src;
+    enlargedImg.alt = img.alt;
+    enlargedImg.style.cssText = `
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    `;
+
+    overlay.appendChild(enlargedImg);
+    document.body.appendChild(overlay);
+
+    // Close on click
+    overlay.addEventListener('click', function () {
+        document.body.removeChild(overlay);
+    });
+
+    // Close on escape key
+    const handleKeyPress = function (e) {
+        if (e.key === 'Escape') {
+            document.body.removeChild(overlay);
+            document.removeEventListener('keydown', handleKeyPress);
+        }
+    };
+    document.addEventListener('keydown', handleKeyPress);
+}
+
 // Initialize all Canvas components when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize dp-panels accordions
     initializeDpPanels();
+
+    // Initialize popup images
+    initializeDpPopupImages();
 
     // Future component initializations will go here
     // initializeDpCallouts();

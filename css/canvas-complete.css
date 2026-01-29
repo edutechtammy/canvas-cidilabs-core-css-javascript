@@ -565,7 +565,124 @@ body {
 }
 
 .dp-panel-hover-color-dp-secondary .dp-panel-heading:hover {
-    background-color: var(--tstc-secondary, #2d3561);
+    background-color: var(--tstc-secondary, #d13138);
+}
+
+/* ================================
+   PHASE 2: IMAGES & FIGURES
+   ================================ */
+/* dp-image system - Figure-based image styling with variants */
+
+/* Base figure styling */
+figure {
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* dp-image rounded corners */
+.dp-image-rounded-5 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dp-image-rounded-10 {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* dp-image border styling */
+.dp-image-bordered {
+    border: 1px solid var(--bs-border-color);
+}
+
+/* dp-image shadow effect */
+.dp-image-shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* dp-image padding */
+.dp-image-padded {
+    padding: 0.5rem;
+    background-color: white;
+}
+
+/* Full width responsive */
+.dp-full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Aspect ratio controls */
+.dp-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.dp-ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+/* Object fit integration */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Popup image styling */
+.dp-popup-image {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.dp-popup-image:hover {
+    transform: scale(1.02);
+}
+
+/* Ordered list styling for figure sequences */
+.dp-order-figure {
+    list-style: none;
+    counter-reset: figure-counter;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+}
+
+.dp-order-figure li {
+    counter-increment: figure-counter;
+    position: relative;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.dp-order-figure li::before {
+    content: counter(figure-counter);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: var(--tstc-primary, #1d2757);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
 }
 
 
