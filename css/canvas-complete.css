@@ -241,7 +241,13 @@ body {
 
     /* TSTC Brand Colors */
     --tstc-primary: #1d2757;
+    /* Texas Blue - Primary brand color */
     --tstc-secondary: #d13138;
+    /* Lone Star Red - Secondary brand color */
+    --tstc-texas-blue: #1d2757;
+    /* Texas Blue (Primary) */
+    --tstc-lone-star-red: #d13138;
+    /* Lone Star Red (Secondary) */
     --tstc-primary-rgb: 29, 39, 87;
     --tstc-secondary-rgb: 209, 49, 56;
 }
@@ -316,7 +322,6 @@ body {
     gap: 0.75rem;
     margin: 1.5rem 0;
     padding: 0.75rem 0;
-    border-top: 4px solid var(--tstc-primary, #1d2757);
     font-weight: 600;
     font-size: 1.25rem;
 }
@@ -414,3 +419,219 @@ body {
    CIDILABS INTEGRATION
    ================================ */
 /* CidiLabs component styles and Canvas compatibility overrides */
+
+
+/* ================================
+   PHASE 2: CALLOUTS & CARDS
+   ================================ */
+/* dp-callout system - Card-based callouts with icon emphasis */
+
+/* Main callout container */
+.dp-callout {
+    display: flex;
+    margin: 1.5rem 0;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+}
+
+/* Left side icon emphasis area */
+.dp-callout-side-emphasis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+    padding: 1rem;
+}
+
+/* Icon sizing for callouts */
+.dp-callout-side-emphasis .dp-i-size-large {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+}
+
+/* Card body within callouts */
+.dp-callout .card-body {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* Callout type variants */
+.dp-callout-type-info {
+    border-left: 4px solid var(--tstc-primary, #1d2757);
+}
+
+.dp-callout-type-title-bar {
+    border-left: 4px solid var(--tstc-primary, #1d2757);
+}
+
+/* Color variants */
+.dp-callout-color-dp-primary {
+    border-color: var(--tstc-primary, #1d2757);
+}
+
+.dp-callout-color-dp-primary .dp-callout-side-emphasis {
+    background-color: var(--tstc-primary, #1d2757);
+}
+
+/* ================================
+   PHASE 2: PANELS & ACCORDIONS
+   ================================ */
+/* dp-panels system - Expandable accordion content organization */
+
+/* Main accordion wrapper */
+.dp-panels-wrapper {
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+/* Individual panel group */
+.dp-panel-group {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.dp-panel-group:last-child {
+    border-bottom: none;
+}
+
+/* Panel heading (clickable) */
+.dp-panel-heading {
+    background-color: var(--tstc-texas-blue, #1d2757);
+    color: white;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Triangle icon for accordion state */
+.dp-panel-heading::after {
+    content: '\f0da';
+    /* FontAwesome right triangle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Expanded state - triangle points down */
+.dp-panel-active .dp-panel-heading::after {
+    transform: rotate(90deg);
+}
+
+.dp-panel-heading:hover {
+    background-color: #2d3561;
+    /* Slightly lighter blue for hover */
+}
+
+/* Active panel heading - Lone Star Red when expanded */
+.dp-panel-active .dp-panel-heading {
+    background-color: var(--tstc-lone-star-red, #d13138);
+}
+
+/* Panel content */
+.dp-panel-content {
+    padding: 1.5rem;
+    background-color: white;
+    display: none;
+    /* Hidden by default, shown via JavaScript */
+}
+
+/* Active panel content */
+.dp-panel-active .dp-panel-content {
+    display: block;
+}
+
+/* Color variants for panels */
+.dp-panel-color-dp-primary .dp-panel-heading {
+    background-color: var(--tstc-primary, #1d2757);
+}
+
+.dp-panel-active-color-dp-secondary .dp-panel-active .dp-panel-heading {
+    background-color: var(--tstc-secondary, #2d3561);
+}
+
+.dp-panel-hover-color-dp-secondary .dp-panel-heading:hover {
+    background-color: var(--tstc-secondary, #2d3561);
+}
+
+
+/* ================================
+   RESPONSIVE BEHAVIOR
+   ================================ */
+/* Canvas-specific responsive patterns from canvas-foundation.css */
+
+/* Mobile responsive adjustments for dp-has-icon (≤768px) */
+@media (max-width: 768px) {
+    .dp-has-icon {
+        padding-left: 25px;
+    }
+
+    .dp-has-icon .fas,
+    .dp-has-icon .fa,
+    .dp-has-icon i {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive typography scaling (Canvas patterns) */
+.dp-wrapper h1,
+.dp-wrapper .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+
+    .dp-wrapper h1,
+    .dp-wrapper .h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.dp-wrapper h2,
+.dp-wrapper .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+
+    .dp-wrapper h2,
+    .dp-wrapper .h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive content adjustments for mobile */
+@media (max-width: 768px) {
+    .dp-popover-content {
+        width: 95%;
+        max-width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Animation preferences */
+@media (prefers-reduced-motion: no-preference) {
+
+    .dp-has-icon .fas,
+    .dp-has-icon .fa,
+    .dp-has-icon i {
+        transition: all 0.3s ease;
+    }
+}

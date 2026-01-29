@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas-Ready Responsive Audit</title>
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Our Canvas CSS -->
+    <link rel="stylesheet" href="../css/canvas-complete.css">
+    
+    <!-- FontAwesome for CidiLabs icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- NO CUSTOM STYLES - Canvas won't have these -->
+</head>
+<body>
+    <nav style="padding: 1rem; background: #f8f9fa; border-bottom: 1px solid #dee2e6; margin-bottom: 1rem;">
+        <a href="../index.html" style="text-decoration: none; color: #0d6efd; font-weight: 500;">← Back to Project Home</a>
+    </nav>
+    
+    <div class="dp-wrapper">
+        <h1>Canvas-Ready Responsive Audit</h1>
+        
+        <!-- Notice: Using only Canvas-available styling -->
+        <div style="background: #e3f2fd; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1976d2;">
+            <strong>Canvas Copy-Paste Test:</strong> This page uses ONLY styles that would work when pasted into Canvas. No custom CSS in the head section. Resize your browser to test how our components behave with real Canvas constraints.
+        </div>
+        
+        <!-- Test 1: Basic Container Behavior -->
+        <section style="margin: 2rem 0;">
+            <h2>Test 1: Container Behavior</h2>
+            <p>Testing the <code>.dp-wrapper</code> container behavior. Should not overflow on any screen size.</p>
+        </section>
+        
+        <!-- Test 2: Icon Headers at Different Lengths -->
+        <section class="dp-content-block" style="background: #f5f5f5; margin: 2rem 0;">
+            <h3 class="dp-has-icon"><i class="fas fa-mobile-alt" aria-hidden="true"><span class="dp-icon-content">&nbsp;</span></i> Mobile Test</h3>
+            <p>Short heading - icon should stay aligned.</p>
+            
+            <h3 class="dp-has-icon"><i class="fas fa-laptop" aria-hidden="true"><span class="dp-icon-content">&nbsp;</span></i> This is a significantly longer heading that will test how the icon positioning and text wrapping behave when content extends to multiple lines across different screen sizes</h3>
+            <p>Long heading - icon should maintain position at top-left of text block.</p>
+        </section>
+        
+        <hr class="dp-hr-plain" />
+        
+        <!-- Test 3: Typography Responsiveness -->
+        <section class="dp-content-block" style="margin: 2rem 0;">
+            <h2>Test 2: Typography Scaling</h2>
+            <p class="lead">This is lead text that should remain readable at all screen sizes without custom responsive CSS.</p>
+            <p class="dp-lead">This is dp-lead text for comparison. Both should work in Canvas.</p>
+            <p>Regular paragraph text testing line length and readability across devices.</p>
+        </section>
+        
+        <hr class="dp-hr-plain" />
+        
+        <!-- Test 4: Content Block Spacing -->
+        <section class="dp-content-block" style="background: #f5f5f5; margin: 2rem 0;">
+            <h3 class="dp-has-icon"><i class="fas fa-tablet-alt" aria-hidden="true"><span class="dp-icon-content">&nbsp;</span></i> Content Block Spacing</h3>
+            <p>Testing how content block padding and margins behave responsively using only our canvas-complete.css styles.</p>
+            <p>This content should maintain appropriate spacing on mobile, tablet, and desktop without custom media queries.</p>
+        </section>
+        
+        <hr class="dp-hr-plain" />
+        
+        <!-- Test 5: Real Canvas Content Pattern -->
+        <section class="dp-content-block" style="background: #f5f5f5;">
+            <h3 class="dp-has-icon"><i class="fas fa-star" aria-hidden="true"><span class="dp-icon-content">&nbsp;</span></i> Learning Objective</h3>
+            <p class="lead">By the end of this section, you will be able to test responsive behavior using only Canvas-compatible styling.</p>
+            <p>This simulates real Canvas lesson content. The styling should work identically whether viewed locally or after being pasted into Canvas.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        </section>
+        
+        <hr class="dp-hr-plain" />
+        
+        <section class="dp-content-block" style="background: #f5f5f5;">
+            <h3 class="dp-has-icon"><i class="fas fa-lightbulb" aria-hidden="true"><span class="dp-icon-content">&nbsp;</span></i> Key Insight</h3>
+            <p>Canvas responsive behavior depends on Bootstrap's built-in responsive features and our canvas-complete.css styles - not custom CSS that can't be pasted into Canvas.</p>
+        </section>
+        
+        <!-- Canvas-Ready Checklist -->
+        <div style="background: #f8f9fa; padding: 1.5rem; margin: 2rem 0; border: 1px solid #dee2e6;">
+            <h4>Canvas-Ready Responsive Checklist:</h4>
+            <ul>
+                <li>✓ No horizontal scrolling on mobile (320px+)</li>
+                <li>✓ Icons maintain circular shape at all sizes</li>
+                <li>✓ Text wraps properly in headings</li>
+                <li>✓ Content blocks maintain structure</li>
+                <li>✓ Typography remains readable</li>
+                <li>✓ Spacing works without custom media queries</li>
+                <li>✓ All styles come from canvas-complete.css only</li>
+            </ul>
+            <p><strong>Key Test:</strong> Everything here should look identical when pasted into actual Canvas.</p>
+        </div>
+    </div>
+</body>
+</html>
