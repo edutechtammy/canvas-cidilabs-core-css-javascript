@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYS-1315 M2L1 Stars - Canvas Original Lesson</title>
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../css/canvas-complete.css">
+
+    <!-- Cidilabs Activities -->
+    <link rel="stylesheet" href="../css/cidilabs-activities.css">
+    
+    <!-- FontAwesome for CidiLabs icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Canvas lesson content from M1L1_Stars.html -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: The Universe</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-1315</span></span> <span class="dp-header-title">M2L1 Stars</span></h2>
+    </header><br />
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The cosmos is within us. We are made of star-stuff.<br />We are a way for the universe to know itself."</em></span><br /><span>&mdash;&nbsp;Carl Sagan</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="dp-content-block kl_introduction">
+                            <p class="lead">Look up at the night sky. Every single star you see, and all the light that makes up the universe, began in a cloud of dust and gas.</p>
+                            <p class="lead">Stars are the engine of the universe, creating most of the matter we know. In this lesson, we'll explore the incredible story of their origin, starting with a massive cosmic cloud called a nebula and its dramatic collapse due to gravity. You'll discover the star's entire life cycle, from its explosive 'ignition' to its final stage. <br /><br />By the end of this lesson, you&rsquo;ll gain the skills to perform your own astronomical work, using formulas to process and analyze stellar data to calculate a star's brightness, color, and temperature. These skills&mdash;processing large data sets, understanding sensor calibration, and computational analysis&mdash;are directly transferable to careers in industrial control, advanced manufacturing, and technical diagnostics.<br /><br />Get ready to trace the stellar life cycle from nebulae to the brilliant points of light we see tonight!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 360px;"><img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="https://tstc.instructure.com/courses/29011/files/13236013/download" alt="The Pillars of Creation in the Eagle Nebula captured in infrared light by Hubble. The light from young stars being formed pierce the clouds of dust and gas in the infrared. NASA, ESA, and the Hubble Heritage Team (STScI/AURA)" height="488.667" data-name="pillars-of-creation2-jpeg.webp" data-size="511 KB" data-available-range="false" data-hidden="false" data-file-id="13236013" data-filename="pillars-of-creation2-jpeg.webp" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13236013" data-api-returntype="File" />
+                            <figcaption><em>The Pillars of Creation in the Eagle Nebula captured in infrared light by Hubble. The light from young stars being formed pierce the clouds of dust and gas in the infrared. Image courtesy of <a class="inline_disabled" title="Link" href="https://science.nasa.gov/mission/webb/star-lifecycle/" target="_blank" rel="noopener">NASA, ESA, and the Hubble Heritage Team (STScI/AURA) </a>The techniques used to capture this image (infrared light, spectral analysis) are the same foundational principles applied in<strong> </strong>thermal imaging for HVAC/electrical diagnostics, non-destructive testing in aviation, and quality control in manufacturing.<br /></em></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-globe-americas dp-default-icon dp-i-size-large">​</i></div>
+            <div class="card-body">
+                <h3 class="card-title">The Real-World Skill Connection</h3>
+                <p class="card-text">The methods astronomers use to study these distant objects rely on advanced diagnostics, sensor calibration, and computational analysis. These data processing and extreme engineering principles are directly transferable to technical careers in industrial control, advanced manufacturing, and power generation.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p>CC2.1 Analyze the science of stars and galaxies</p>
+                    <p style="padding-left: 40px;">★ LO2.1.1 Determine the origin of stars and their life cycle</p>
+                    <p style="padding-left: 40px;">★ LO2.1.2 Perform computations involving a star&rsquo;s brightness, color, and temperature</p>
+                    <p style="padding-left: 40px;">LO2.1.3 Identify galaxy properties</p>
+                    <p style="padding-left: 40px;">LO2.1.4 Identify properties and predictions of the Big Bang theory</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Readings</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Textbook Reading</h3>
+                <p class="card-text"><span class="phpally-ignore">Read <a class="inline_disabled" href="https://bookshelf.vitalsource.com/reader/books/9781264450817/epubcfi/6/46%5B%3Bvnd.vst.idref%3Dchapter14%5D!/4/4/4%5Bch14%5D/1:0%5B%2C14%5D" target="_blank" rel="noopener">Chapter 14</a> ( Sections 14.1 through 14.2) <em>Physical Science</em>, 13<sup>th</sup> edition by Bill Tillery McGraw Hill Education<br /><br />This is the essential information you need to master the concepts in this lesson. Pay special attention to <strong>gravitational collapse</strong> and the conditions required for a star's ignition (the "flare-up event"). This section will provide the definitions and processes we will be discussing. By the end of this reading, you should be able to describe the process of a star forming from a nebula.<br /></span></p>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Deeper Dive (Extra Enrichment)</h3>
+                <p class="card-text"><span class="phpally-ignore">These resources from NASA provide engaging, real-world context and visuals to enhance your understanding. They are highly recommended for anyone who wants to see the concepts in action!</span></p>
+                <ul>
+                    <li class="card-text"><span class="phpally-ignore"><a class="inline_disabled" href="https://science.nasa.gov/mission/webb/star-lifecycle" target="_blank" rel="noopener">Star Lifecycle</a>&nbsp;- Visualizing the full life span of stars, especially how a star&rsquo;s <strong>mass</strong> determines its ultimate fate.<br /><br /></span></li>
+                    <li class="card-text"><span class="phpally-ignore"><a class="inline_disabled" href="https://science.nasa.gov/mission/hubble/science/science-highlights/exploring-the-birth-of-stars" target="_blank" rel="noopener">Exploring the Birth of Stars</a></span><span class="phpally-ignore"> - See incredible images and learn about the high-precision instruments and remote sensing equipment scientists use to observe the formation of new stars in nebulae. This connects the textbook concepts to modern astronomical research and to the calibration, automation, and data acquisition skills you're learning.</span></li>
+                </ul>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch the following four videos and take notes to learn more about stars.&nbsp;<br /><br /></p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Video 1: Star Magnitude (Brightness) Explained</h3>
+                <div class="dp-panel-content ">
+                    <h4>Star Magnitude (Brightness) Explained</h4>
+                    <p>Getting ready for the learning objectives that involve calculations, this video demonstrates the<strong> </strong>engineering process of creating a quantitative scale, following the development of concepts and calculations through time. This is an exercise in applied mathematics and modeling.</p>
+                    <p>Time: 11:15</p>
+                    <div class="dp-embed-wrapper"><iframe title="YouTube video player" src="https://www.youtube.com/embed/JIXFXGiDa4Y?si=btx5Pfa8Mm77n0KU" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" data-mce-fragment="1"></iframe></div>
+                    <div class="dp-embed-wrapper"><a class="inline_disabled" style="color: #1b588d;" href="https://tstc.yuja.com/V/Video?v=13057794&amp;node=56556369&amp;a=118583465" target="_blank" rel="noopener">ASL version of Star Magniture (Brightness) Explained</a></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Mini Lecture: Formation of Stars: Structure of a Star</h3>
+                <div class="dp-panel-content ">
+                    <h4>Mini Lecture: Formation of Stars: Structure of a Star</h4>
+                    <p>This video introduces the formation of a star, and where it is placed on the HR diagram, and how its life-cycle evolves.</p>
+                    <p>Time: 4:27</p>
+                    <div class="dp-embed-wrapper"><iframe title="Embedded Media titled: Mini Lecture - Formation of Stars" src="https://tstc.yuja.com/V/Video?v=5170571&amp;node=23533267&amp;a=1016097426&amp;preload=false" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" data-mce-fragment="1"></iframe></div>
+                    <p>ASL version of <a class="inline_disabled" style="color: #1b588d;" href="https://tstc.yuja.com/V/Video?v=12996155&amp;node=56271872&amp;a=43624324" target="_blank" rel="noopener">Mini Lecture - Formation of Stars - Structure of Stars</a></p>
+                    <p><a class="inline_disabled" style="color: #1b588d;" href="https://tstc.yuja.com/V/Video?v=5170571&amp;node=23533266&amp;a=15406723" target="_blank" rel="noopener">Direct Link to non-ASL Video</a></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Video 3: Neutron Stars: The Most Extreme Objects in the Universe</h3>
+                <div class="dp-panel-content">
+                    <h4>Neutron Stars: The Most Extreme Objects in the Universe</h4>
+                    <p><span>This video will take you on journey to the center of the neutron star. (</span>Time: 14:14)</p>
+                    <div class="dp-embed-wrapper"><iframe title="YouTube video player" src="https://www.youtube.com/embed/1Ou1MckZHTA?si=B5nfoFXT_mLDp47w" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" data-mce-fragment="1"></iframe></div>
+                    <div class="dp-embed-wrapper"><a class="inline_disabled" style="color: #1b588d;" href="https://tstc.yuja.com/V/Video?v=13057655&amp;node=56555775&amp;a=43180624" target="_blank" rel="noopener">ASL version of Neutron Stars</a></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Video 4 Mini Lecture: E=m^2: Energy and Escape Velocity</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini Lecture: E=m^2: Energy and Escape Velocity</h4>
+                    <p>This video will introduce you to black holes, and explain how they are so massive that not even light can escape them.</p>
+                    <p>Time: 8:20</p>
+                    <div class="dp-embed-wrapper"><iframe title="Embedded Media titled: Mini Lecture - E=mc^2" src="https://tstc.yuja.com/V/Video?v=5170570&amp;node=23533265&amp;a=1186779270&amp;preload=false" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" data-mce-fragment="1"></iframe></div>
+                    <div class="dp-embed-wrapper"><a class="inline_disabled" style="color: #1b588d;" href="https://tstc.yuja.com/V/Video?v=5170570&amp;node=23533264&amp;a=92514501" target="_blank" rel="noopener">Direct Video Link</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+        <p>Do you like to learn by doing? Select each of the tabs below for interactive learning activities that allow you to practice and apply some of the key concepts you have explored in this lesson. These activities help you practice the same concepts you will find on your Mastery Assessment for this module.</p>
+        <div>
+            <div class="dp-order-wrapper">
+                <h4 class="dp-has-icon"><span style="color: #363b77;"><i class="dp-icon fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> What are the stages of a star life cycle?</span></h4>
+                <p>A star's life cycle depends on it's mass. A low-mass star like our Sun evolves differently than massive stars. See how you well you know the star life cycle order for each star mass.</p>
+                <p>Arrange the following star life cycle stages below in order for a <span style="color: #363b77;"><strong>massive star.</strong></span></p>
+                <ol class="dp-order dp-order-figure">
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13236013/download" alt="The Pillars of Creation in the Eagle Nebula captured in infrared light by Hubble." width="150" height="111.5" data-name="pillars-of-creation2-jpeg.webp" data-size="511 KB" data-available-range="false" data-hidden="false" data-file-id="13236013" data-filename="pillars-of-creation2-jpeg.webp" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13236013" data-api-returntype="File" />
+                            <figcaption>Nebulae</figcaption>
+                        </figure>
+                    </li>
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246211/download" alt="A protostar illustration." width="150" height="111.5" data-name="Protostar-Illustration.jpg" data-size="122 KB" data-available-range="false" data-hidden="false" data-file-id="13246211" data-filename="Protostar-Illustration.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246211" data-api-returntype="File" />
+                            <figcaption>Protosar</figcaption>
+                        </figure>
+                    </li>
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246213/download" alt="A main sequence star illustration." width="150" height="111.5" data-name="main-sequence-star-1024x683.png" data-size="208 KB" data-available-range="false" data-hidden="false" data-file-id="13246213" data-filename="main-sequence-star-1024x683.png" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246213" data-api-returntype="File" />
+                            <figcaption>Main Sequence Star</figcaption>
+                        </figure>
+                    </li>
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246226/download" alt="A red supergiant star illustration." width="150" height="111.5" data-name="Red_giant_simulation_4_(cropped).jpg" data-size="12 KB" data-available-range="false" data-hidden="false" data-file-id="13246226" data-filename="Red_giant_simulation_4_%28cropped%29.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246226" data-api-returntype="File" />
+                            <figcaption>Red Supergiants</figcaption>
+                        </figure>
+                    </li>
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246242/download" alt="A supernova illustration." width="150" height="111.5" data-name="supernova.jpg" data-size="36 KB" data-available-range="false" data-hidden="false" data-file-id="13246242" data-filename="supernova.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246242" data-api-returntype="File" />
+                            <figcaption>Supernovas</figcaption>
+                        </figure>
+                    </li>
+                    <li class="">
+                        <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246251/download" alt="A neutron star illustration." width="150" height="111.5" data-name="Nuetron star.jpg" data-size="33 KB" data-available-range="false" data-hidden="false" data-file-id="13246251" data-filename="Nuetron+star.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246251" data-api-returntype="File" />
+                            <figcaption>Neutron Star or Black Hole</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+                <div class="dp-si-feedback dp-si-correct" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                    <div>
+                        <p>Correct! Great work! WOOHOO!</p>
+                    </div>
+                </div>
+                <div class="dp-si-feedback dp-si-incorrect" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                    <div>
+                        <p>Please Try Again.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="dp-has-icon"><span style="color: #363b77;"><i class="dp-icon fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn the Low-Mass Star Life Cycle</span></h4>
+                <p>A star's life cycle depends on it's mass. A low-mass star like our Sun evolves differently than massive stars. See how you well you know the star life cycle order for each star mass.</p>
+                <p>Arrange the following star life cycle stages below in order for a low-mass star like our Sun.</p>
+                <div class="dp-order-wrapper">
+                    <ol class="dp-order dp-order-figure">
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13236013/download" alt="The Pillars of Creation in the Eagle Nebula captured in infrared light by Hubble." width="150" height="111.5" data-name="pillars-of-creation2-jpeg.webp" data-size="511 KB" data-available-range="false" data-hidden="false" data-file-id="13236013" data-filename="pillars-of-creation2-jpeg.webp" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13236013" data-api-returntype="File" />
+                                <figcaption>Nebulae</figcaption>
+                            </figure>
+                        </li>
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246211/download" alt="A protostar illustration." width="150" height="111.5" data-name="Protostar-Illustration.jpg" data-size="122 KB" data-available-range="false" data-hidden="false" data-file-id="13246211" data-filename="Protostar-Illustration.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246211" data-api-returntype="File" />
+                                <figcaption>Protosar</figcaption>
+                            </figure>
+                        </li>
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246213/download" alt="A main sequence star illustration." width="150" height="111.5" data-name="main-sequence-star-1024x683.png" data-size="208 KB" data-available-range="false" data-hidden="false" data-file-id="13246213" data-filename="main-sequence-star-1024x683.png" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246213" data-api-returntype="File" />
+                                <figcaption>Main Sequence Star</figcaption>
+                            </figure>
+                        </li>
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246281/download" alt="A red giant star illustration." width="150" height="111.5" data-name="red-giant-star.png" data-size="478 KB" data-available-range="false" data-hidden="false" data-file-id="13246281" data-filename="red-giant-star.png" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246281" data-api-returntype="File" />
+                                <figcaption>Red Giant</figcaption>
+                            </figure>
+                        </li>
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246272/download" alt="A planetary nebula illustration. " width="150" height="111.5" data-name="planetary nebula.jpg" data-size="410 KB" data-available-range="false" data-hidden="false" data-file-id="13246272" data-filename="planetary+nebula.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246272" data-api-returntype="File" />
+                                <figcaption>Planetary Nebula</figcaption>
+                            </figure>
+                        </li>
+                        <li class="">
+                            <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 150px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246278/download" alt="A white dwarf illustration." width="150" height="111.5" data-name="white dwarf.jpg" data-size="76 KB" data-available-range="false" data-hidden="false" data-file-id="13246278" data-filename="white+dwarf.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246278" data-api-returntype="File" />
+                                <figcaption>White Dwarf</figcaption>
+                            </figure>
+                        </li>
+                    </ol>
+                    <div class="dp-si-feedback dp-si-correct" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                        <div>
+                            <p>Correct! Great Work!&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="dp-si-feedback dp-si-incorrect" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                        <div>
+                            <p>Please Try Again.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <h4><i class="fas fa-external-link-alt" style="margin-right: 0.5em;" aria-hidden="true"></i><span style="color: #363b77;">Star Color &amp; Temperature</span></h4>
+                    <p><span>Discover the relationship between a star's surface temperature and its color. Use the interactive slider below to see how temperature changes affect stellar appearance, from cool red stars to hot blue giants. For the full experience, we recommend going directly to the <a class="inline_disabled" href="https://edutechtammy.github.io/star-color-and-temperature/" target="_blank" rel="noopener">interactive tool.</a> Alternatively, you can use the embedded version below. (Click and scroll inside the panel to begin.)<br /><br /></span></p>
+                    <div class="dp-embed-wrapper" style="text-align: center;"><iframe style="border: none;" title="star-color and temperature accessible interactive activity" src="https://edutechtammy.github.io/star-color-and-temperature/" width="800" height="900" loading="lazy" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+                </div>
+                <p>&nbsp;</p>
+                <div>
+                    <h4 class="dp-panel-heading"><i class="fas fa-external-link-alt" style="margin-right: 0.5em;" aria-hidden="true"></i><strong> Learn How to Classify Stars</strong></h4>
+                    <p>Explore the Hertzsprung-Russell diagram, the fundamental tool astronomers use to classify stars. See how luminosity and temperature reveal stellar properties and evolutionary stages. For the best experience, <a class="inline_disabled" href="https://edutechtammy.github.io/hr-diagram/" target="_blank" rel="noopener">go directly to the interactive</a> but it is also embedded below for your convenience. <span>(Click and scroll inside the panel to begin.)</span></p>
+                    <div class="dp-embed-wrapper" style="text-align: center;"><iframe style="border: none;" title="hr-diagram accessible interactive activity" src="https://edutechtammy.github.io/hr-diagram/" width="800" height="1000" loading="lazy" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+                </div>
+                <p>&nbsp;</p>
+                <div class="dp-si-sort-pool dp-si-rounded cp-item-dp-accent dp-si-sort-type-figure cp-bucket-dp-accent" data-bucket-color-class="cp-bg-dp-accent" data-item-color-class="cp-bg-dp-accent">
+                    <h4 class="dp-has-icon"><i class="dp-icon fas fa-link"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Name That Star Stage!</h4>
+                    <p>Below are the descriptions of the six stages of the star life cycle for a massive star. Correctly match the stage cycle name to each stage description.&nbsp;</p>
+                    <div class="dp-si-sort-content">
+                        <div class="dp-si-sort-bucket dp-si-sort-answer-bank cp-bucket-dp-primary cp-item-dp-secondary" data-item-color-class="cp-bg-dp-secondary" data-bucket-color-class="cp-bg-dp-primary">
+                            <div class="dp-si-sort-bucket-content cp-bg-dp-primary">
+                                <h4 class="dp-si-sort-bucket-header">Star Life Cycle Stages -<span style="font-size: 18pt;"> Drag the star stage name below to the appropriate stage description.</span></h4>
+                                <div class="dp-action-item dp-action-item-block dp-action-item-instructions" style="display: none;" aria-hidden="true">
+                                    <p>Add the correct items to their buckets and any distractors to this bucket. All items will move to this bucket to start for students.</p>
+                                </div>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid pt-3 px-0 p-0">
+                            <div class="row gy-3">
+                                <div class="dp-si-sort-bucket cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" data-item-color-class="cp-bg-dp-accent" data-bucket-color-class="cp-bg-dp-gray">
+                                    <div class="dp-si-sort-bucket-content cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 1</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">A massive cloud of gas and dust collapses due to gravity.</h4>
+                                        <ul>
+                                            <li class="dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px; text-align: center;"><img class="dp-ratio-4-3 object-fit-cover" style="display: block; margin-left: auto; margin-right: auto;" src="https://tstc.instructure.com/courses/29011/files/13236013/download" alt="The Pillars of Creation in the Eagle Nebula captured in infrared light by Hubble." width="125" height="92.75" data-name="pillars-of-creation2-jpeg.webp" data-size="511 KB" data-available-range="false" data-hidden="false" data-file-id="13236013" data-filename="pillars-of-creation2-jpeg.webp" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13236013" data-api-returntype="File" />
+                                                    <figcaption>Nebula</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dp-si-sort-bucket cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" style="text-align: center;" data-item-color-class="cp-bg-dp-accent" data-bucket-color-class="cp-bg-dp-gray">
+                                    <div class="dp-si-sort-bucket-content cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 2</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">The collapsing core heats up, but nuclear fusion has not yet begun</h4>
+                                        <ul>
+                                            <li class="dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246211/download" alt="A protostar illustration. " width="125" height="92.75" data-name="Protostar-Illustration.jpg" data-size="122 KB" data-available-range="false" data-hidden="false" data-file-id="13246211" data-filename="Protostar-Illustration.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246211" data-api-returntype="File" />
+                                                    <figcaption>Protostar</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dp-si-sort-bucket dp-si-sort-text cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" style="text-align: center;" data-bucket-color-class="cp-bg-dp-gray" data-item-color-class="cp-bg-dp-accent">
+                                    <div class="dp-si-sort-bucket-content  cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 3</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stable stage where hydrogen fuses to helium in the core; the star spends most of its life here.</h4>
+                                        <ul>
+                                            <li class="dp-si-sort-type-figure dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246213/download" alt="A main sequence star illustration. " width="125" height="92.75" data-name="main-sequence-star-1024x683.png" data-size="208 KB" data-available-range="false" data-hidden="false" data-file-id="13246213" data-filename="main-sequence-star-1024x683.png" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246213" data-api-returntype="File" />
+                                                    <figcaption>Main Sequence Star</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dp-si-sort-bucket dp-si-sort-text cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" data-item-color-class="cp-bg-dp-accent" data-bucket-color-class="cp-bg-dp-gray">
+                                    <div class="dp-si-sort-bucket-content  cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 4</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">The star runs out of hydrogen, the core contracts, and the outer layers expand dramatically. Heavier elements begin fusing in shells.</h4>
+                                        <ul>
+                                            <li class="dp-si-sort-type-figure dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246226/download" alt="A red supoergiant illustration. " width="125" height="92.75" data-name="Red_giant_simulation_4_(cropped).jpg" data-size="12 KB" data-available-range="false" data-hidden="false" data-file-id="13246226" data-filename="Red_giant_simulation_4_%28cropped%29.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246226" data-api-returntype="File" />
+                                                    <figcaption>Red Supergiant</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dp-si-sort-bucket dp-si-sort-text cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" data-item-color-class="cp-bg-dp-accent" data-bucket-color-class="cp-bg-dp-gray">
+                                    <div class="dp-si-sort-bucket-content  cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 5</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Catastrophic explosion that temporarily outshines a galaxy. Iron forms in the core, fusion stops, and the star collapses violently, ejecting its outer layers.</h4>
+                                        <ul>
+                                            <li class="dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246242/download" alt="A supernova illustration." width="125" height="92.75" data-name="supernova.jpg" data-size="36 KB" data-available-range="false" data-hidden="false" data-file-id="13246242" data-filename="supernova.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246242" data-api-returntype="File" />
+                                                    <figcaption>Supernova</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dp-si-sort-bucket dp-si-sort-text cp-item-dp-accent col-12 col-md-4 cp-bucket-dp-gray" data-item-color-class="cp-bg-dp-accent" data-bucket-color-class="cp-bg-dp-gray">
+                                    <div class="dp-si-sort-bucket-content  cp-bg-dp-gray">
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">Stage 6</h4>
+                                        <h4 class="dp-si-sort-bucket-header" style="text-align: center;">The incredibly dense, rapidly spinning remnant core composed almost entirely of tightly packed neutrons.</h4>
+                                        <ul>
+                                            <li class="dp-si-item-figure cp-bg-dp-secondary">
+                                                <figure class="dp-image-rounded-5 dp-image-bordered" style="width: 125px;"><img class="dp-ratio-4-3 object-fit-cover" src="https://tstc.instructure.com/courses/29011/files/13246251/download" alt="A Nuetron star illustration." width="125" height="92.75" data-name="Nuetron star.jpg" data-size="33 KB" data-available-range="false" data-hidden="false" data-file-id="13246251" data-filename="Nuetron+star.jpg" data-locked="false" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/29011/files/13246251" data-api-returntype="File" />
+                                                    <figcaption>Neutron Star</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-si-feedback dp-si-incorrect" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                        <div>
+                            <p>Try Again.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <h4 class="dp-has-icon"><i class="fas fa-pencil-ruler"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Test Your Knowledge</h4>
+                <p>Test your knowledge on the lesson concepts by answering the following questions. Click or select each card to reveal the correct answer.</p>
+                <div class="dp-column-container container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>When does the &ldquo;stable&rdquo; life of a star begin?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer&nbsp;</h4>
+                                                <p class="card-text">When the outward pressure from the fusion reaction balances the inward force of gravity.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>Based upon the apparent magnitude scale established by Hipparchus, a Level 1 star is ____ times brighter than a Level 3 star.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer&nbsp;</h4>
+                                                <p class="card-text">6.3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>What is the name of the graph that relates the absolute magnitude of a star to its temperature- luminosity.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer&nbsp;</h4>
+                                                <p class="card-text">Hertzsprung-Russell diagram</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;<br /></span></i><strong><br /></strong>What is the class of stars that regularly changes brightness and is very useful for determining distances in space?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer&nbsp;</h4>
+                                                <p class="card-text">Cepheid variable</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>What processes in a massive star lead up to a supernova?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer&nbsp;</h4>
+                                                <p>1. It contracts, builds up heat, goes through many fusion stages to the formation of iron.</p>
+                                                <p>2. After iron is produced, energy is no longer released; the star collapses and rebounds into a catastrophic explosion.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary mx-auto d-block dp-shadow-r2">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>The apparent magnitude of a star is defined as how bright a star appears as viewed from Earth. What does this depends upon?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer</h4>
+                                                <p class="card-text">It depends on the distance of the star from Earth.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary mx-auto d-block dp-shadow-r2">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;<br /></span></i><strong><br /></strong>What is the method used by astronomers to calculate the brightness of a star which compensates for the different distances from Earth?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer</h4>
+                                                <p class="card-text">absolute magnitude</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary mx-auto d-block dp-shadow-r2">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>What is the property of a main sequence star that determines its brightness, temperature and location on the H-R diagram?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer</h4>
+                                                <p class="card-text">mass</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary mx-auto d-block dp-shadow-r2">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>What type of star has the same temperature as a main sequence star but is much brighter?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer</h4>
+                                                <p class="card-text">red giant</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
+                                <div class="dp-flip-card-inner">
+                                    <div class="dp-front-card">
+                                        <div class="dp-card card h-100 cp-bg-dp-primary mx-auto d-block dp-shadow-r2">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme dp-has-icon" style="text-align: center;"><i class="dp-icon fas fa-question-circle dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i><strong><br /></strong>If the remaining core of a supernova has a mass of at least three solar masses. Theoretically, what might it collapse into being?</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dp-back-card">
+                                        <div class="dp-card card h-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title dp-ignore-theme">Answer</h4>
+                                                <p class="card-text">A black hole</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 class=""><span>Great job! You now possess the fundamental knowledge to look at any star in the night sky and immediately identify its current stage and likely fate.</span><br /><strong></strong></h5>
+                <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                    <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-binoculars dp-default-icon dp-i-size-large">​</i></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Use Your New Knowledge</h3>
+                        <h4 class="card-text"><span>Find the brightest, bluest star you can see tonight&mdash;what does its color tell you about its temperature and age?</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block kl_content_block_1" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational: Stellar Luminosity</h3>
+        <p>Test your knowledge on the lesson's computational content of a star's magnitude-brightness relationship. The difference in the absolute magnitude between two stars is used to calculate the ratio of their true luminosities (how much energy they truly emit).</p>
+        <p style="background-color: #f5f5f5;">To calculate the difference in brightness between two stars, use the following equation:</p>
+        <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mfrac>
+                        <msub>
+                            <mi>B</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <msub>
+                            <mi>B</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mfrac>
+                    <mo>=</mo>
+                    <msup>
+                        <mn>10</mn>
+                        <mrow>
+                            <mn>0.4</mn>
+                            <mo>(</mo>
+                            <msub>
+                                <mi>M</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>&minus;</mo>
+                            <msub>
+                                <mi>M</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>)</mo>
+                        </mrow>
+                    </msup>
+                </mrow>
+            </math></p>
+        <p style="background-color: #f5f5f5;">This equation is the <strong>Astronomical Magnitude-Brightness Ratio Formula</strong>.</p>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-info-circle dp-default-icon dp-i-size-large">​</i></div>
+            <div class="card-body">
+                <h4 class="card-title"><strong>Technical Relevance Note</strong></h4>
+                <p class="card-text">This equation, which uses powers of 10 to quantify extreme ranges, is a prime example of applying <strong>logarithmic scales</strong>. Technicians use this exact type of mathematical principle to analyze decibel (dB) measurements in audio/electrical systems, pH balances in chemical processing, and material stress factors in engineering&mdash;where small changes in input can have massive changes in output.</p>
+            </div>
+        </div>
+        <p style="background-color: #f5f5f5;">&nbsp;</p>
+        <p style="background-color: #f5f5f5;">Equation Breakdown: The part of the equation in front of the equal sign (<math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mfrac>
+                        <msub>
+                            <mi>B</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <msub>
+                            <mi>B</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mfrac>
+                </mrow>
+            </math>) is more like a label than something you do math with. The right side <br />1<math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <msup>
+                        <mn>0</mn>
+                        <mrow>
+                            <mn>0.4</mn>
+                            <mo>(</mo>
+                            <msub>
+                                <mi>M</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>&minus;</mo>
+                            <msub>
+                                <mi>M</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>)</mo>
+                        </mrow>
+                    </msup>
+                </mrow>
+            </math>is where all the action is. When you get an answer, you are finding how many times brighter one star is compared to the other.<br /><br />So what is absolute magnitude? It is the total amount of energy radiated into space each second. Often, comparisons are made to our own sun, a fairly average star, to find x or how many times brighter or dimmer the star being compared is. Interestingly, stars with small absolute magnitudes are the more luminous stars compared to the larger numbered absolute magnitudes. This means the magnitude scale is counter-intuitive! Stars with smaller (or more negative) <em>M </em>values are more luminous (brighter).</p>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title dp-has-icon"><i class="dp-icon far fa-question-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Question</h4>
+                <p class="card-text" style="text-align: center;"><span>Since our star is pretty average, let's compare it to the brightest star we see from Earth, <a class="inline_disabled" style="color: #144066;" href="https://astrobackyard.com/sirius-star/" target="_blank" rel="noopener">Sirius A.</a><br /><br />Our sun has an absolute magnitude of 4.85. <br />Sirius A has an absolute magnitude of 1.43.<br /><br />How many times more luminous is Sirius A than the Sun?</span></p>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary dp-panel-color-dp-secondary" style="background-color: #f5f5f5;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading" style="background-image: initial; background-position: initial; background-repeat: initial; background-attachment: initial;"><strong><span style="color: #ffffff;">Click to Reveal Answer</span></strong></h3>
+                <div class="dp-panel-content">
+                    <h4><span><strong>Answer: </strong><em>Sirius A is approximately 21.72 times more luminous than the Sun</em></span></h4>
+                    <p>Not the same answer that you got? Study the walkthrough of the math computation below to see where you may have gone wrong.</p>
+                    <p>Given:</p>
+                    <p style="padding-left: 40px;">M<sub>sun</sub> = 4.85</p>
+                    <p style="padding-left: 40px;">M<sub>Sirius</sub> = 1.43</p>
+                    <p><span>Formula:</span></p>
+                    <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mfrac>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                </mfrac>
+                                <mo>=</mo>
+                                <msup>
+                                    <mn>10</mn>
+                                    <mrow>
+                                        <mn>0.4</mn>
+                                        <mo>(</mo>
+                                        <msub>
+                                            <mi>M</mi>
+                                            <mn>2</mn>
+                                        </msub>
+                                        <mo>&minus;</mo>
+                                        <msub>
+                                            <mi>M</mi>
+                                            <mn>1</mn>
+                                        </msub>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </msup>
+                            </mrow>
+                        </math></p>
+                    <p>Step 1: Find the difference in absolute magnitude</p>
+                    <p style="padding-left: 40px;">∆M = M<sub>sun</sub> - M<sub>Sirius</sub></p>
+                    <p style="padding-left: 40px;">∆M = 4.85 - 1.43</p>
+                    <p style="padding-left: 40px;">∆M = 3.42</p>
+                    <p>Step 2: Calculate the brightness ratio</p>
+                    <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mfrac>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>S</mi>
+                                            <mi>i</mi>
+                                            <mi>r</mi>
+                                            <mi>i</mi>
+                                            <mi>u</mi>
+                                            <mi>s</mi>
+                                        </mrow>
+                                    </msub>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>s</mi>
+                                            <mi>u</mi>
+                                            <mi>n</mi>
+                                        </mrow>
+                                    </msub>
+                                </mfrac>
+                                <mo>=</mo>
+                                <msup>
+                                    <mn>10</mn>
+                                    <mrow>
+                                        <mn>0.4</mn>
+                                        <mo>(</mo>
+                                        <msub>
+                                            <mi>M</mi>
+                                            <mrow>
+                                                <mi>s</mi>
+                                                <mi>u</mi>
+                                                <mi>n</mi>
+                                            </mrow>
+                                        </msub>
+                                        <mo>&minus;</mo>
+                                        <msub>
+                                            <mi>M</mi>
+                                            <mrow>
+                                                <mi>S</mi>
+                                                <mi>i</mi>
+                                                <mi>r</mi>
+                                                <mi>i</mi>
+                                                <mi>u</mi>
+                                                <mi>s</mi>
+                                            </mrow>
+                                        </msub>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </msup>
+                            </mrow>
+                        </math></p>
+                    <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mfrac>
+                                        <msub>
+                                            <mi>B</mi>
+                                            <mrow>
+                                                <mi>S</mi>
+                                                <mi>i</mi>
+                                                <mi>r</mi>
+                                                <mi>i</mi>
+                                                <mi>u</mi>
+                                                <mi>s</mi>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>B</mi>
+                                            <mrow>
+                                                <mi>s</mi>
+                                                <mi>u</mi>
+                                                <mi>n</mi>
+                                            </mrow>
+                                        </msub>
+                                    </mfrac>
+                                    <mo>=</mo>
+                                    <msup>
+                                        <mn>10</mn>
+                                        <mrow>
+                                            <mn>0.4</mn>
+                                            <mo>(</mo>
+                                            <mn>4.85</mn>
+                                            <mo>&minus;</mo>
+                                            <mn>1.43</mn>
+                                            <mo>)</mo>
+                                        </mrow>
+                                    </msup>
+                                </mrow>
+                            </semantics>
+                        </math></p>
+                    <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mfrac>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>S</mi>
+                                            <mi>i</mi>
+                                            <mi>r</mi>
+                                            <mi>i</mi>
+                                            <mi>u</mi>
+                                            <mi>s</mi>
+                                        </mrow>
+                                    </msub>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>s</mi>
+                                            <mi>u</mi>
+                                            <mi>n</mi>
+                                        </mrow>
+                                    </msub>
+                                </mfrac>
+                                <mo>=</mo>
+                                <msup>
+                                    <mn>10</mn>
+                                    <mrow>
+                                        <mn>0.4</mn>
+                                        <mo>(</mo>
+                                        <mn>3.42</mn>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </msup>
+                            </mrow>
+                        </math></p>
+                    <p style="padding-left: 40px;"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mfrac>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>S</mi>
+                                            <mi>i</mi>
+                                            <mi>r</mi>
+                                            <mi>i</mi>
+                                            <mi>u</mi>
+                                            <mi>s</mi>
+                                        </mrow>
+                                    </msub>
+                                    <msub>
+                                        <mi>B</mi>
+                                        <mrow>
+                                            <mi>s</mi>
+                                            <mi>u</mi>
+                                            <mi>n</mi>
+                                        </mrow>
+                                    </msub>
+                                </mfrac>
+                                <mo>=</mo>
+                                <msup>
+                                    <mn>10</mn>
+                                    <mn>1.368</mn>
+                                </msup>
+                            </mrow>
+                        </math></p>
+                    <p style="padding-left: 40px;">10<sup>1.3368</sup> = 21.72</p>
+                    <p>This result shows that Sirius A is approximately 21.72 times more luminous than the Sun.</p>
+                    <h5><span><strong><i class="dp-icon icon-chat icon-Solid dp-i-size-large cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Discussion</strong></span></h5>
+                    <p>So, is Sirius the brightest star? No, it appears bright due to proximity to us, 8.6 light years away. Brighter stars are in our night sky, but they do not appear so bright due to how far away they are. You might find the YouTube short <a class="inline_disabled" href="https://www.youtube.com/shorts/z3cOEGKgEwg" target="_blank" rel="noopener">Sun vs Brightest Known Star</a> to be interesting. It compares the size of Sirius to our solar system's largest planet and then compares Sirius to the most luminous known star, the Godzilla Star.</p>
+                </div>
+            </div>
+        </div>
+        <p style="padding-left: 80px;">&nbsp;</p>
+    </section>
+    <hr class="dp-hr-plain" />
+    <section class="dp-content-block" style="background: #f5f5f5;">
+        <h3 class="dp-has-icon"><i class="dp-icon fas fa-user-tie" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Durable Skills for Job Seeking Success</h3>
+        <p>This lesson, particularly the sections on complex formulas, diagrams, and media analysis, helps students develop three critical durable skills essential for employment in any technical industry:</p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-gray">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">1. Digital Literacy and Analysis</h3>
+                <div class="dp-panel-content ">
+                    <p>Employers in all technical fields&mdash;from HVAC to electronics&mdash;require employees who can move beyond basic readings to interpret complex data and make informed decisions.</p>
+                    <p><strong><i class="dp-icon icon-flag icon-Solid cp-txt-dp-primary dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Skill Demonstrated by Content:</strong></p>
+                    <ul>
+                        <li style="list-style-type: none;">
+                            <ul>
+                                <li>
+                                    <p><strong><span class="citation-20">Translating visual data:</span></strong><span class="citation-20 citation-end-20"> Using the H-R Diagram and the Star Color &amp; Temperature interactive to correlate visual cues (color) with quantitative properties (temperature, luminosity).</span></p>
+                                </li>
+                                <li>
+                                    <p><strong>Applying formulas to real-world problems:</strong> Utilizing the Magnitude-Brightness Ratio Formula to find a ratio, which is a key skill in interpreting performance metrics, efficiency ratings, and diagnostic codes.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong><i class="dp-icon fas fa-user-tie dp-i-size-large cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; Job Interview Talking Point:</strong> "This lesson taught me to analyze the H-R diagram, essentially a complex scatter plot, to instantly determine a star's properties. This skill directly translates to <strong>reading technical specifications and troubleshooting complex system graphs</strong> in my field."</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">2. Critical Thinking and Problem-Solving</h3>
+                <div class="dp-panel-content ">
+                    <p><span class="citation-19 citation-end-19">Technical careers are fundamentally about diagnosing and fixing issues. </span>The multi-step conceptual and computational problems reinforce systematic troubleshooting.</p>
+                    <p><strong><i class="dp-icon icon-flag icon-Solid cp-txt-dp-primary dp-i-size-large" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Skill Demonstrated by Content:</strong></p>
+                    <ul>
+                        <li style="list-style-type: none;">
+                            <ul>
+                                <li>
+                                    <p><strong>Systems thinking:</strong> Tracing the entire <strong>stellar life cycle</strong> requires understanding a chain of dependent processes (gravity &gt; collapse &gt; ignition&gt; fusion &gt; death). This mirrors understanding the flow and dependencies in industrial, electrical, or mechanical systems.</p>
+                                </li>
+                                <li>
+                                    <p><strong><span class="citation-18">Challenging assumptions:</span></strong><span class="citation-18"> The "counter-intuitive" nature of the magnitude scale (smaller numbers = brighter stars) requires learners to stop relying on instinct and instead follow a </span><strong><span class="citation-18">defined logical model</span></strong><span class="citation-18 citation-end-18">&mdash;a core trait of an effective technician.</span></p>
+                                    <p>&nbsp;</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong><i class="dp-icon fas fa-user-tie dp-i-size-large cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Job Interview Talking Point:</strong> "The physics module trained me to follow a logical problem-solving sequence, especially when dealing with counter-intuitive concepts like the magnitude scale. This rigorous approach helps me <strong>methodically diagnose faults</strong> instead of guessing when a piece of equipment malfunctions."</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">3. Computational Fluency (Applied Math)</h3>
+                <div class="dp-panel-content">
+                    <p>This goes beyond knowing the formula; it's about confidently and accurately manipulating numbers under pressure.</p>
+                    <p><strong><i class="dp-icon icon-flag icon-Solid dp-i-size-large cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Skill Demonstrated by Content:</strong></p>
+                    <ul>
+                        <li style="list-style-type: none;">
+                            <ul>
+                                <li>
+                                    <p><strong>Precision and attention to detail:</strong> The walkthrough for the Luminosity calculation models how to carefully substitute variables, handle exponents, and ensure the final answer is correctly interpreted&mdash;all crucial steps in calculating tolerances, currents, or chemical mixtures.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong><i class="dp-icon fas fa-user-tie dp-i-size-large cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Job Interview Talking Point:</strong> "The computational parts of the lesson reinforced my comfort with complex formulas, specifically applied logarithms and ratios. I can assure you of my <strong>high level of accuracy and attention to detail</strong> when performing critical calculations on the job site.</p>
+                </div>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+    <hr class="dp-hr-plain" />
+</div>
+<!--  End of the lesson copy pasted -->
+
+</body>
+</html>
