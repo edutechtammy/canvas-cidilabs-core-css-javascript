@@ -9,12 +9,24 @@
     <link rel="stylesheet" href="css/canvas-complete.css">
 </head>
 <body>
-    <main>
+    <div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
         <header>
             <h1>Canvas Local Development Environment</h1>
             <p>Test your Canvas HTML content locally before deploying to Canvas.</p>
         </header>
-        
+
+        <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: The Universe</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">edutechtammy</span></span> <span class="dp-header-title">Canvas Local Development Environment</span></h2>
+    </header><br />
+        <!--  The kl id is from Cidi Labs Design Plus. The lead class is from Bootstraps -->
+<div id="kl_introduction">
+        <p  class="lead">Welcome to the Canvas Local Development Environment project. We are working to build out the classes and javascript for a robust local testing environment.</p>
+    </div>
         <section class="content-area">
             <h2>Development Tools & Test Pages</h2>
             
@@ -23,6 +35,7 @@
                 <p>Systematic component development with isolated tests:</p>
                 <ul>
                     <li><a href="test-pages/bootstrap-foundation-test.html">Bootstrap Foundation Test</a> - Bootstrap grid and core containers</li>
+                    <li><a href="test-pages/dp-header-test.html"><strong>dp-header System Test</strong></a> - Header styling, spacing, and visual hierarchy (Phase 3 Priority)</li>
                     <li><a href="test-pages/dp-has-icon.html">dp-has-icon Component Test</a> - Icon + text layout with circular blue icons</li>
                     <li><a href="test-pages/dp-hr-plain-test.html">dp-hr-plain Component Test</a> - Horizontal rule styling for section separation</li>
                     <li><a href="test-pages/dp-lead and lead.html">Typography Test (.lead and .dp-lead)</a> - Lead paragraphs and quote styling</li>
@@ -63,7 +76,16 @@
                     <li>✅ <strong>Modal dialogs and overlays</strong> - dp-popup-image system implemented</li>
                 </ul>
                 
-                <h4 style="color: #856404; margin-top: 1.5rem;">🎯 Phase 3: Polish & Enhancement (PLANNING)</h4>
+                <h4 style="color: #28a745; margin-top: 1.5rem;">✅ Phase 3: Polish & Enhancement (COMPLETE! 🎉)</h4>
+                <ul style="margin-bottom: 1.5rem;">
+                    <li>✅ <strong>Header styling system</strong> - Enhanced dp-header visual elements and layout</li>
+                    <li>✅ <strong>Content breathing room</strong> - Improved spacing via dp-wrapper, dp-flat-sections, or variation-1 classes</li>
+                    <li>✅ <strong>h4.dp-has-icon system</strong> - Smaller section headings with FontAwesome icons and subtle underlines</li>
+                    <li>✅ <strong>Callout title bar refinements</strong> - Enhanced dark styling and visual consistency</li>
+                    <li>✅ <strong>CSS architecture optimization</strong> - Resolved conflicts between core and activities stylesheets</li>
+                </ul>
+                
+                <h4 style="color: #856404; margin-top: 1.5rem;">🎯 Phase 4: Advanced Features & Optimization (PLANNING)</h4>
                 <ul style="margin-bottom: 1.5rem;">
                     <li>⏳ <strong>dp-embed-wrapper system</strong> - Responsive video/iframe containers</li>
                     <li>⏳ <strong>dp-shadow variants</strong> - Enhanced card shadow effects</li>
@@ -73,7 +95,7 @@
                 </ul>
                 
                 <div style="background: #e8f5e8; padding: 1rem; border-left: 4px solid #28a745; margin-top: 1rem;">
-                    <strong>Current Status:</strong> Phase 1 & 2 complete! Systematic Canvas replication with all core components implemented. Phase 3 planning focuses on polish, optimization, and enhanced features.
+                    <strong>Current Status:</strong> Phases 1, 2 & 3 complete! Systematic Canvas replication with core components, interactive features, and polish/enhancements fully implemented. Phase 4 planning focuses on advanced features and optimization.
                 </div>
             </div>
             
@@ -83,7 +105,7 @@
                 <p><strong>Tip:</strong> Use the full lesson preview to see your content in context of a complete Canvas lesson.</p>
             </div>
         </section>
-    </main>
+    </div> <!-- End of dp-wrapper -->
 
     <!-- Canvas Complete JavaScript -->
     <script src="js/canvas-complete.js"></script>

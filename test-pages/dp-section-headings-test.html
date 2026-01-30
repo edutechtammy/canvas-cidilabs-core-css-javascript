@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dp-section-headings System Test</title>
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Our Canvas CSS -->
+    <link rel="stylesheet" href="../css/canvas-complete.css">
+    
+    <!-- FontAwesome for CidiLabs icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav style="padding: 1rem; background: #f8f9fa; border-bottom: 1px solid #dee2e6; margin-bottom: 1rem;">
+        <a href="../index.html" style="text-decoration: none; color: #0d6efd; font-weight: 500;">← Back to Project Home</a>
+    </nav>
+    
+    <div class="dp-wrapper">
+        <h1>Testing .dp-section-headings System</h1>
+        
+        <div style="background: #e3f2fd; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1976d2;">
+            <strong>Canvas Section Headings Analysis:</strong> The dp-section-headings system handles h3 level headings with FontAwesome icons that introduce lesson sections like Readings, Media, Practice activities, etc. This test page focuses on icon positioning, typography, and visual hierarchy.
+        </div>
+        
+        <!-- Header Test Area - Paste Canvas section heading HTML here -->
+        <div style="background: #fff3cd; padding: 1rem; margin: 1rem 0; border-left: 4px solid #856404;">
+            <h3>📋 Section Heading Test Area</h3>
+            <p><strong>Instructions:</strong> Paste the h3 section heading HTML from Canvas lessons below this section to test styling and layout.</p>
+            <p><strong>Focus Areas:</strong></p>
+            <ul>
+                <li>dp-has-icon layout and icon positioning</li>
+                <li>FontAwesome icon styling and sizing</li>
+                <li>Typography hierarchy and spacing</li>
+                <li>Border treatments and colors (TSTC brand integration)</li>
+                <li>Responsive behavior at different screen sizes</li>
+            </ul>
+        </div>
+
+        <!-- Paste Canvas section heading HTML here -->
+        
+        <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Readings</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Textbook Reading</h3>
+                <p class="card-text"><span class="phpally-ignore">Read <a class="inline_disabled" href="https://bookshelf.vitalsource.com/reader/books/9781264450817/epubcfi/6/46%5B%3Bvnd.vst.idref%3Dchapter14%5D!/4/4/4%5Bch14%5D/1:0%5B%2C14%5D" target="_blank" rel="noopener">Chapter 14</a> ( Sections 14.1 through 14.2) <em>Physical Science</em>, 13<sup>th</sup> edition by Bill Tillery McGraw Hill Education<br /><br />This is the essential information you need to master the concepts in this lesson. Pay special attention to <strong>gravitational collapse</strong> and the conditions required for a star's ignition (the "flare-up event"). This section will provide the definitions and processes we will be discussing. By the end of this reading, you should be able to describe the process of a star forming from a nebula.<br /></span></p>
+            </div>
+        </div>
+        
+        <!-- Test Section 1: Common Canvas Section Types -->
+        <hr style="margin: 3rem 0;" />
+        <h2>Common Canvas Section Headings</h2>
+        
+        <div style="background: #f8f9fa; padding: 2rem; margin: 2rem 0; border: 1px solid #dee2e6; border-radius: 8px;">
+            <h3>Test 1: Readings Section</h3>
+            <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Readings</h3>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 2rem; margin: 2rem 0; border: 1px solid #dee2e6; border-radius: 8px;">
+            <h3>Test 2: Media Section</h3>
+            <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 2rem; margin: 2rem 0; border: 1px solid #dee2e6; border-radius: 8px;">
+            <h3>Test 3: Practice and Apply Section</h3>
+            <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+        </div>
+        
+        <!-- Test Section 2: Icon Variations -->
+        <div style="background: #f8f9fa; padding: 2rem; margin: 2rem 0; border: 1px solid #dee2e6; border-radius: 8px;">
+            <h3>Test 4: Various FontAwesome Icons</h3>
+            
+            <div style="margin: 1rem 0;">
+                <h4>Question/Quiz Icon:</h4>
+                <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-question-circle" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Questions</h3>
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <h4>Assignment Icon:</h4>
+                <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-edit" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Assignment</h3>
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <h4>Discussion Icon:</h4>
+                <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-comments" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Discussion</h3>
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <h4>Lab/Experiment Icon:</h4>
+                <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-flask" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Laboratory</h3>
+            </div>
+        </div>
+        
+        <!-- Test Section 3: Responsive and Layout Analysis -->
+        <div style="background: #e8f5e8; padding: 2rem; margin: 2rem 0; border: 1px solid #28a745; border-radius: 8px;">
+            <h3>Test 5: Responsive Behavior Analysis</h3>
+            <p><strong>Visual debugging helpers:</strong></p>
+            
+            <div style="border: 2px dashed #dc3545; margin: 1rem 0; padding: 1rem;">
+                <h3 class="dp-has-icon" style="border-color: #1d2757; background: rgba(255, 255, 0, 0.1);"><i class="fa-book fas" style="border-color: #1d2757; background: rgba(0, 255, 0, 0.1);" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Readings with Debug Backgrounds</h3>
+            </div>
+            <small><em>Color-coded backgrounds help visualize element boundaries and spacing</em></small>
+        </div>
+        
+        <!-- Test Section 4: Content Integration -->
+        <div style="background: #f8f9fa; padding: 2rem; margin: 2rem 0; border: 1px solid #dee2e6; border-radius: 8px;">
+            <h3>Test 6: Section Heading with Following Content</h3>
+            
+            <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Readings</h3>
+            
+            <div style="margin-top: 1rem;">
+                <p>This content follows the section heading to test proper spacing and visual hierarchy. The heading should have appropriate margin-bottom to separate it from the content that follows.</p>
+                
+                <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+                    <div class="card-body">
+                        <h3 class="card-title">Sample Callout</h3>
+                        <p class="card-text">This callout follows the section heading to demonstrate content flow and spacing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Development Notes Section -->
+        <div style="background: #f8f9fa; padding: 2rem; margin: 3rem 0; border-left: 4px solid #6c757d;">
+            <h3>🛠️ Development Notes & Observations</h3>
+            <div style="font-family: monospace; font-size: 0.9rem; line-height: 1.4;">
+                <p><strong>Current CSS Classes Involved:</strong></p>
+                <ul>
+                    <li><code>.dp-has-icon</code> - Main container for heading + icon layout</li>
+                    <li><code>h3.dp-has-icon</code> - Specific h3 styling</li>
+                    <li><code>.fas, .fa</code> - FontAwesome icon classes</li>
+                    <li><code>.dp-icon-content</code> - Icon content wrapper (usually hidden)</li>
+                    <li><code>border-color</code> - TSTC brand color integration</li>
+                </ul>
+                
+                <p><strong>Areas to Address:</strong></p>
+                <ul>
+                    <li>Icon and text alignment</li>
+                    <li>Consistent spacing between icon and text</li>
+                    <li>Border treatments and color consistency</li>
+                    <li>Responsive behavior on small screens</li>
+                    <li>Typography hierarchy with surrounding content</li>
+                    <li>FontAwesome version compatibility</li>
+                </ul>
+                
+                <p><strong>Canvas Pattern Analysis:</strong></p>
+                <ul>
+                    <li>Common structure: <code>&lt;h3 class="dp-has-icon" style="border-color: #1d2757;"&gt;</code></li>
+                    <li>Icon pattern: <code>&lt;i class="fas fa-[icon]" style="border-color: #1d2757;" aria-hidden="true"&gt;</code></li>
+                    <li>Hidden span: <code>&lt;span class="dp-icon-content" style="display: none;"&gt;&amp;nbsp;&lt;/span&gt;</code></li>
+                    <li>TSTC brand color (#1d2757) consistently applied</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Complete JavaScript -->
+    <script src="../js/canvas-complete.js"></script>
+</body>
+</html>
