@@ -131,19 +131,24 @@ body {
     width: 100%
 }
 
+.col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
 .col-lg-6 {
     flex: 0 0 auto;
-    width: 50%
+    width: 100%
 }
 
 .col-md-6 {
     flex: 0 0 auto;
-    width: 50%
+    width: 100%
 }
 
 .col-md-4 {
     flex: 0 0 auto;
-    width: 33.33333333%
+    width: 100%
 }
 
 @media (min-width: 768px) {
@@ -337,12 +342,6 @@ body {
     display: none !important;
 }
 
-/* dp-column-container - Layout wrapper */
-.dp-column-container {
-    width: 100%;
-    margin: 0 auto;
-}
-
 /* dp-has-icon - Icon + text layout pattern */
 .dp-has-icon {
     display: flex;
@@ -354,6 +353,16 @@ body {
     font-size: 1.5rem;
     line-height: 1.2;
     position: relative;
+}
+
+/* Flip card vertical spacing */
+.dp-flip-card {
+    margin-bottom: 40px;
+}
+
+.dp-column-container .col-md-6:last-child .dp-flip-card:last-child,
+.dp-column-container .col-sm-12:last-child .dp-flip-card:last-child {
+    margin-bottom: 0;
 }
 
 /* Horizontal line through the icon area */
@@ -819,24 +828,181 @@ figcaption {
     transform: scale(1.02);
 }
 
+/* ================================
+   SORT ITEMS FIGURE SUPPORT
+   ================================ */
+/* Additional styling for sort items that use figures/images instead of text */
+
+/* Figure-based sortable items - generic styling */
+.dp-si-item-figure {
+    background-color: #1d2757;
+    border: 2px solid #14193e;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: move;
+    user-select: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Ensure child elements don't capture drag events - the <li> must be the drag target */
+.dp-si-item-figure * {
+    pointer-events: none;
+}
+
+.dp-si-item-figure:hover {
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.dp-si-item-figure.dragging {
+    opacity: 0.6;
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Figure styling inside sort items */
+.dp-si-item-figure figure {
+    margin: 0;
+    text-align: center;
+}
+
+.dp-si-item-figure figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Answer bank container - ensure it has blue background and proper layout */
+.dp-si-sort-answer-bank {
+    background-color: transparent !important;
+}
+
+.dp-si-sort-answer-bank .dp-si-sort-bucket-content {
+    min-height: 180px;
+    border-radius: 8px;
+}
+
+.dp-si-sort-answer-bank .dp-si-sort-bucket-content.cp-bg-dp-primary {
+    background-color: #1d2757 !important;
+}
+
+/* Answer bank header styling */
+.dp-si-sort-answer-bank .dp-si-sort-bucket-header {
+    color: white;
+    font-weight: normal;
+}
+
+/* Answer bank list - grid layout for draggable items */
+.dp-si-sort-answer-bank ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 0;
+    margin: 0;
+    list-style: none;
+    min-height: 120px;
+}
+
+/* Items inside answer bank - they sit on the blue background */
+.dp-si-sort-answer-bank .dp-si-item-figure {
+    flex: 0 0 auto;
+    background-color: #1d2757;
+    border-color: #3d4a8a;
+}
+
+/* Color class support for sort items and flip cards */
+.cp-bg-dp-primary {
+    background-color: #1d2757 !important;
+    color: white !important;
+}
+
+.cp-bg-dp-primary .card-title,
+.cp-bg-dp-primary .card-text,
+.cp-bg-dp-primary h1,
+.cp-bg-dp-primary h2,
+.cp-bg-dp-primary h3,
+.cp-bg-dp-primary h4,
+.cp-bg-dp-primary h5,
+.cp-bg-dp-primary h6,
+.cp-bg-dp-primary p {
+    color: white !important;
+}
+
+.cp-bg-dp-secondary {
+    background-color: #1d2757 !important;
+    color: white !important;
+}
+
+.cp-bg-dp-secondary figcaption {
+    color: white !important;
+}
+
+.cp-bg-dp-gray {
+    background-color: #f5f5f5;
+}
+
+.cp-bg-dp-accent {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Target buckets (Stage 1-6) should have white/light background */
+.dp-si-sort-bucket:not(.dp-si-sort-answer-bank) .dp-si-sort-bucket-content.cp-bg-dp-gray {
+    background-color: #f5f5f5 !important;
+}
+
+/* Target bucket lists need proper layout */
+.dp-si-sort-bucket:not(.dp-si-sort-answer-bank) ul {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Success state for figure items */
+.dp-si-item-figure.sort-success-item {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+}
+
 /* Ordered list styling for figure sequences - DISABLED to prevent unwanted numbers */
 .dp-order-figure {
     list-style: none;
     /* counter-reset: figure-counter; */
     /* Disabled */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    /* Removed flex layout - vertical stacking is easier for drag and drop */
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
 }
 
 .dp-order-figure li {
     /* counter-increment: figure-counter; */
     /* Disabled */
     position: relative;
-    flex: 1;
+    /* Removed flex properties - items now stack vertically */
     min-width: 150px;
+    max-width: fit-content;
+    /* Constrain width to content size */
+    width: fit-content;
+    /* Prevent li from stretching full width */
     text-align: center;
+    margin-bottom: 1rem;
+    /* Spacing between items */
+}
+
+/* Ensure child elements don't capture drag events - the <li> must be the drag target */
+.dp-order-figure li * {
+    pointer-events: none;
 }
 
 .dp-order-figure li::before {

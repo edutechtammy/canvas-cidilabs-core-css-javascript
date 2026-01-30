@@ -78,6 +78,56 @@ function initializeDpPanels() {
    ================================ */
 /* CidiLabs initialization and Canvas integration functions */
 
+// =========================================
+// SORT ITEMS PREPROCESSING
+// =========================================
+/**
+ * Preprocess Sort Items components before cidilabs-scripts.js initializes them
+ * This fixes structural issues where:
+ * 1. Answer bank may be missing a <ul> element
+ * 2. Figure-based items use dp-si-item-figure but script expects dp-si-item-text
+ * 
+ * This function must run BEFORE cidilabs-scripts.js initializeSortItems()
+ */
+function preprocessSortItems() {
+    const sortContainers = document.querySelectorAll('.dp-si-sort-pool');
+
+    if (sortContainers.length === 0) return;
+
+    console.log('[Canvas Complete] Preprocessing', sortContainers.length, 'sort container(s)');
+
+    sortContainers.forEach((container, index) => {
+        // 1. Ensure answer bank has a <ul> element
+        const answerBank = container.querySelector('.dp-si-sort-answer-bank');
+
+        if (answerBank) {
+            const answerBankContent = answerBank.querySelector('.dp-si-sort-bucket-content');
+            let answerBankList = answerBank.querySelector('ul');
+
+            if (!answerBankList && answerBankContent) {
+                // Create the missing <ul> element
+                answerBankList = document.createElement('ul');
+                answerBankContent.appendChild(answerBankList);
+                console.log('[Canvas Complete] Created <ul> in answer bank');
+            }
+        }
+
+        // 2. Add dp-si-item-text class to all dp-si-item-figure elements
+        // This allows cidilabs-scripts.js to find and process them
+        const figureItems = container.querySelectorAll('.dp-si-item-figure');
+
+        figureItems.forEach(item => {
+            if (!item.classList.contains('dp-si-item-text')) {
+                item.classList.add('dp-si-item-text');
+            }
+        });
+
+        if (figureItems.length > 0) {
+            console.log('[Canvas Complete] Added dp-si-item-text to', figureItems.length, 'figure item(s)');
+        }
+    });
+}
+
 // dp-popup-image functionality - Click to enlarge
 function initializeDpPopupImages() {
     const popupImages = document.querySelectorAll('.dp-popup-image');
@@ -138,6 +188,10 @@ function createImagePopup(img) {
 
 // Initialize all Canvas components when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
+    // IMPORTANT: Preprocess sort items FIRST, before cidilabs-scripts.js runs
+    // This fixes structural issues in the HTML that cidilabs-scripts.js expects
+    preprocessSortItems();
+
     // Initialize dp-panels accordions
     initializeDpPanels();
 
