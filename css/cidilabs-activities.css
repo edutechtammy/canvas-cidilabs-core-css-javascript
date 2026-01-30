@@ -276,6 +276,18 @@
     color: white;
 }
 
+.cp-bg-dp-primary .card-title,
+.cp-bg-dp-primary .card-text,
+.cp-bg-dp-primary h1,
+.cp-bg-dp-primary h2,
+.cp-bg-dp-primary h3,
+.cp-bg-dp-primary h4,
+.cp-bg-dp-primary h5,
+.cp-bg-dp-primary h6,
+.cp-bg-dp-primary p {
+    color: white;
+}
+
 .dp-back-card .dp-card {
     background-color: white;
     color: #333;
@@ -443,12 +455,25 @@
     list-style: none;
     padding: 15px;
     margin: 15px auto;
-    background: white;
+    background: transparent;
+    /* Default to transparent for image-based activities */
     border-radius: 8px;
+}
+
+/* White background only for text-based activities */
+.dp-order.dp-order-text {
+    background: white;
 }
 
 .dp-order.dp-order-text {
     max-width: 400px;
+}
+
+/* Ensure centering for image-based ordering activities */
+.dp-order-wrapper .dp-order {
+    margin: 15px auto !important;
+    max-width: 500px;
+    display: block;
 }
 
 /* Component-specific icon positioning */

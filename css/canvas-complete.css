@@ -214,7 +214,7 @@ body {
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -597,11 +597,6 @@ h4.dp-has-icon span {
     height: auto;
 }
 
-/* Card body general styling */
-.card-body {
-    background-color: white;
-}
-
 /* Card body within callouts */
 .dp-callout .card-body {
     flex: 1;
@@ -611,6 +606,10 @@ h4.dp-has-icon span {
 /* Callout type variants */
 .dp-callout-type-info {
     border-left: 4px solid var(--tstc-primary, #1d2757);
+}
+
+.dp-callout-type-info .card-body {
+    background-color: white;
 }
 
 .dp-callout-type-title-bar {
@@ -659,8 +658,9 @@ h4.dp-has-icon span {
     border-bottom: none;
 }
 
-/* Panel heading (clickable) */
-.dp-panel-heading {
+/* Panel heading (clickable) - Only in accordion contexts */
+.dp-panels-wrapper .dp-panel-heading,
+.dp-panel-group .dp-panel-heading {
     background-color: var(--tstc-texas-blue, #1d2757);
     color: white;
     margin: 0;
@@ -676,8 +676,9 @@ h4.dp-has-icon span {
     align-items: center;
 }
 
-/* Triangle icon for accordion state */
-.dp-panel-heading::after {
+/* Triangle icon for accordion state - Only in accordion contexts */
+.dp-panels-wrapper .dp-panel-heading::after,
+.dp-panel-group .dp-panel-heading::after {
     content: '\f0da';
     /* FontAwesome right triangle */
     font-family: 'Font Awesome 6 Free';
@@ -691,7 +692,8 @@ h4.dp-has-icon span {
     transform: rotate(90deg);
 }
 
-.dp-panel-heading:hover {
+.dp-panels-wrapper .dp-panel-heading:hover,
+.dp-panel-group .dp-panel-heading:hover {
     background-color: #2d3561;
     /* Slightly lighter blue for hover */
 }
@@ -751,6 +753,15 @@ figcaption {
     font-style: italic;
 }
 
+/* Activity figcaptions - larger and non-italic for better readability */
+.dp-order-wrapper figcaption {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
 /* dp-image rounded corners */
 .dp-image-rounded-5 {
     border-radius: 5px;
@@ -808,10 +819,11 @@ figcaption {
     transform: scale(1.02);
 }
 
-/* Ordered list styling for figure sequences */
+/* Ordered list styling for figure sequences - DISABLED to prevent unwanted numbers */
 .dp-order-figure {
     list-style: none;
-    counter-reset: figure-counter;
+    /* counter-reset: figure-counter; */
+    /* Disabled */
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -819,7 +831,8 @@ figcaption {
 }
 
 .dp-order-figure li {
-    counter-increment: figure-counter;
+    /* counter-increment: figure-counter; */
+    /* Disabled */
     position: relative;
     flex: 1;
     min-width: 150px;
@@ -827,7 +840,10 @@ figcaption {
 }
 
 .dp-order-figure li::before {
-    content: counter(figure-counter);
+    /* content: counter(figure-counter); */
+    /* Disabled */
+    display: none;
+    /* Hide any existing counter content */
     position: absolute;
     top: -10px;
     left: 10px;
