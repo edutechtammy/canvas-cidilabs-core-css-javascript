@@ -4,59 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas Local Development Environment</title>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="css/cidilabs-activities.css">
     <!-- Canvas Complete CSS -->
     <link rel="stylesheet" href="css/canvas-complete.css">
 </head>
 <body>
+
+
+
     <div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
-        <header>
-            <h1>Canvas Local Development Environment</h1>
-            <p>Test your Canvas HTML content locally before deploying to Canvas.</p>
-        </header>
 
         <header class="dp-header dp-flat-sections">
-        <div class="dp-content-block kl_custom_block_1">
-            <p style="text-align: center;">Module 2: The Universe</p>
-            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
-            <p>&nbsp;</p>
-        </div>
-        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">edutechtammy</span></span> <span class="dp-header-title">Canvas Local Development Environment</span></h2>
-    </header><br />
+            <div class="dp-content-block kl_custom_block_1">
+                <p style="text-align: center;">GitHub: edutechtammy</p> 
+            </div>
+            <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Dev Tools</span></span> <span class="dp-header-title">Canvas Local Development Environment</span></h2>
+        </header>
+        
         <!--  The kl id is from Cidi Labs Design Plus. The lead class is from Bootstraps -->
-<div id="kl_introduction">
-        <p  class="lead">Welcome to the Canvas Local Development Environment project. We are working to build out the classes and javascript for a robust local testing environment.</p>
-    </div>
-        <section class="content-area">
-            <h2>Development Tools & Test Pages</h2>
-            
-            <div class="test-section">
-                <h3>🧪 Individual Component Test Pages</h3>
-                <p>Systematic component development with isolated tests:</p>
+        <div id="kl_introduction">
+            <p  class="lead">Welcome to the Canvas Local Development Environment project. We are working to build out the classes and javascript for a robust local testing environment.</p>
+        </div>
+
+        <section class="dp-content-block kl_content_block_1" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Full Lesson Example</h3>
+        <p>When the project began, none of the styling was in place. It was bare-bones text. As the project neared the end and it came down to finding conflicting css rules between the interactive activities and the core css, putting the Canvas located course page side by side with the build helped to get the final refinements down to a close enough match to feel offline development could give a good feel for what the final lesson would look like even from local development conditions. </p>
+        <a href="canvas-html-explorations/M1L1_Stars.html">Original Canvas Lesson HTML</a>
+        </section>
+
+        <section class="dp-content-block kl_content_block_1" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Interactive Activities Templates/tests</h3>
+        <p>You might be interested to know that this was actually the first part built. It was a project unto itself, initially.</p>
+        <ul>
+                    <li><a href="button-tabs-vertical.html">Button Tabs Vertical Activity Test</a> - Interactive ordering activity component testing</li>
+                    <li><a href="flipcards.html">CidiLabs Flipcards Test</a> - Interactive flipcard component testing</li>
+                    <li><a href="match-items.html">Match Items Activity Test</a> - Interactive matching activity component testing</li>
+                    <li><a href="modals.html">Modals Activity Test</a> - Interactive modal component testing</li>
+                    <li><a href="order-items.html">Order Items Activity Test</a> - Interactive ordering activity component testing</li>
+                    <li><a href="select-all.html">Select All Activity Test</a> - Interactive select all activity component testing</li>
+                    <li><a href="sort-items.html">Sort Items Activity Test</a> - Interactive sort items activity component testing</li> 
+                </ul>
+        </section>
+
+        <section class="dp-content-block kl_content_block_1" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Individual Component Test Pages</h3>
+        <p></p>
+        <p>Systematic core component development with isolated tests:</p>
                 <ul>
                     <li><a href="test-pages/bootstrap-foundation-test.html">Bootstrap Foundation Test</a> - Bootstrap grid and core containers</li>
                     <li><a href="test-pages/dp-header-test.html"><strong>dp-header System Test</strong></a> - Header styling, spacing, and visual hierarchy (Phase 3 Priority)</li>
                     <li><a href="test-pages/dp-has-icon.html">dp-has-icon Component Test</a> - Icon + text layout with circular blue icons</li>
                     <li><a href="test-pages/dp-hr-plain-test.html">dp-hr-plain Component Test</a> - Horizontal rule styling for section separation</li>
                     <li><a href="test-pages/dp-lead and lead.html">Typography Test (.lead and .dp-lead)</a> - Lead paragraphs and quote styling</li>
+                    <li><a href="test-pages/dp-code-test.html">Code Styling Test</a> - Inline code and code block styling</li>
                     <li><a href="test-pages/responsive-audit-canvas-ready.html"><strong>Responsive Behavior Audit</strong></a> - Canvas-compatible responsive testing</li>
                     <li><a href="test-pages/dp-callout-test.html">dp-callout Component Test</a> - Callouts and card-based content blocks</li>
                     <li><a href="test-pages/dp-panels-test.html">dp-panels Accordion Test</a> - Expandable accordion panels and content organization</li>
                     <li><a href="test-pages/dp-image-test.html">dp-image System Test</a> - Image galleries, figures, and responsive image styling</li>
-                    <li><a href="flipcards.html">CidiLabs Flipcards Test</a> - Interactive flipcard component testing</li>
-                    <li><a href="order-items.html">Order Items Activity Test</a> - Interactive ordering activity component testing</li>
                 </ul>
-                
-                <h3>📋 Full Lesson Previews</h3>
-                <p>See styling progress in complete Canvas lesson context:</p>
-                <ul>
-                    <li><a href="canvas-html-explorations/M1L1_Stars_preview.html"><strong>Complete Lesson Preview (M2L1 Stars)</strong></a> - Our CSS/JS integration in action</li>
-                    <li><a href="canvas-html-explorations/M1L1_Stars.html">Original Canvas Lesson HTML</a> - Raw Canvas HTML for reference</li>
-                </ul>
-            </div>
+        </section>
 
-            <div class="test-section">
-                <h3>📝 Development Progress</h3>
+        
+
+        <section class="dp-content-block kl_content_block_1" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Development Progress</h3>
+        <p></p>
+        
                 <p>Track our systematic development of Canvas styling:</p>
                 
                 <h4 style="color: #28a745; margin-top: 1.5rem;">✅ Phase 1: Core Foundation (COMPLETE! 🎉)</h4>
@@ -84,22 +107,22 @@
                     <li>✅ <strong>Content breathing room</strong> - Improved spacing via dp-wrapper, dp-flat-sections, or variation-1 classes</li>
                     <li>✅ <strong>h4.dp-has-icon system</strong> - Smaller section headings with FontAwesome icons and subtle underlines</li>
                     <li>✅ <strong>Callout title bar refinements</strong> - Enhanced dark styling and visual consistency</li>
-                    <li>⏳ <strong>CSS architecture optimization</strong> - Resolved conflicts between core and activities stylesheets</li>
+                    <li>✅ <strong>CSS architecture optimization</strong> - Resolved conflicts between core and activities stylesheets</li>
+                    <li>⏳ <strong>Quick Snippet templates for Activities</strong> - In progress</li>
                 </ul>
                 
                 <h4 style="color: #856404; margin-top: 1.5rem;">🎯 Phase 4: Advanced Features & Optimization (PLANNING)</h4>
                 <ul style="margin-bottom: 1.5rem;">
-                    <li>⏳ <strong>dp-embed-wrapper system</strong> - Responsive video/iframe containers</li>
-                    <li>⏳ <strong>dp-shadow variants</strong> - Enhanced card shadow effects</li>
-                    <li>⏳ <strong>Color palette utilities</strong> - Background colors, borders, text colors</li>
-                    <li>⏳ <strong>Enhanced typography</strong> - Additional text styling classes</li>
-                    <li>⏳ <strong>Performance optimization</strong> - CSS organization and documentation</li>
+                    <li>⏳ <strong>Integration with AI content analysis workflows</strong> - Details coming soon</li>
+                    <li>⏳ <strong>Foundation for automated HTML optimization</strong> - Details coming soon</li>
+                    <li>⏳ <strong>Scalable system for pedagogical content improvement</strong> - Details coming soon</li>
+                    <li>⏳ <strong>Community adoption by instructional design teams</strong> - Details coming soon</li>
                 </ul>
                 
                 <div style="background: #e8f5e8; padding: 1rem; border-left: 4px solid #28a745; margin-top: 1rem;">
                     <strong>Current Status:</strong> Phases 1, 2 & 3 complete! Systematic Canvas replication with core components, interactive features, and polish/enhancements fully implemented. Phase 4 planning focuses on advanced features and optimization.
                 </div>
-            </div>
+        </section>
             
             <div class="test-section">
                 <h3>🎯 Quick Start</h3>

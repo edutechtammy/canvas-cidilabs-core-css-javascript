@@ -554,6 +554,40 @@ h4.dp-has-icon span {
     text-align: center;
 }
 
+/* Code styling - inline and block code elements */
+code {
+    padding: 0.2em 0.4em;
+    font-size: 0.875em;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    color: #d63384;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+pre {
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f5f5f5;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
 
 /* ================================
    LAYOUT & SPACING

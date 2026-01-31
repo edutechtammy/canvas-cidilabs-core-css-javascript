@@ -8,34 +8,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reference-css/bootstrap.min.css?v=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/cidilabs-activities.css?v=1.6">
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="css/canvas-complete.css">
 </head>
 <body>
-    <div class="container" style="max-width: 1200px; margin: 20px auto; padding: 20px;">
+
+        <div id="dp-wrapper" class="dp-wrapper dp-flat-sections">
         <a href="index.html" class="back-to-index">← Back to Index</a>
-        <h1>CidiLabs Flipcards Test</h1>
-        <p>Testing the Flipcards component locally before deploying to Canvas.</p>
+        <header class="dp-header dp-flat-sections">
+            <div class="dp-content-block kl_custom_block_1">
+                <p style="text-align: center;">GitHub: edutechtammy</p> 
+            </div>
+            <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Dev Tools</span></span> <span class="dp-header-title">Flipcards Interactive Activity</span></h2>
+        </header>
+       
         
-        <!-- CidiLabs Flip Cards:  CidiLabs DesignPLUS Flip Cards are interactive, accessible, and customizable digital flashcards designed to enhance engagement and active recall within the Canvas Learning Management System. They allow instructors to create "purposeful pauses" in learning by displaying content (text or images) that flips over when a student clicks on it. 
-Key Features and Benefits
--- Interactivity: Designed to improve long-term memory through active recall.
--- Accessibility: Fully accessible to all users, including keyboard navigation support (space bar/enter key).
--- Customization: Supports text, images, and can be configured for various uses like vocabulary,, concepts, or flashcards.
--- DesignPLUS Integration: Part of the Design Tools for Canvas, allowing for easy creation without needing to know HTML.
--- Visual Organization: Enables instructors to organize content in a compact, engaging format. 
-        Usage in Canvas
-        Functionality: Students can click on the cards to reveal the back side.
-        Formatting: Cards can be set to equal height for consistent, polished presentation.
-        Placement: Can be added to pages, assignments, or discussions within Canvas.   
+        <!--  The kl id is from Cidi Labs Design Plus. The lead class is from Bootstraps -->
+        <div id="kl_introduction">
+            <p  class="lead">Interactive cards with a front side that gives the prompt and then a backside for self-check. Features TSTC branding colors, rounded corners, and full accessibility support.</p>
+        </div>
+        <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Features</h3>
+        <p>CidiLabs Flip Cards:  CidiLabs DesignPLUS Flip Cards are interactive, accessible, and customizable digital flashcards designed to enhance engagement and active recall within the Canvas Learning Management System. They allow instructors to create "purposeful pauses" in learning by displaying content (text or images) that flips over when a student clicks on it.</p> 
+        <p>Key Features and Benefits</p>
+        <ul>
+            <li>Interactivity: Designed to improve long-term memory through active recall.</li>
+            <li>Accessibility: Fully accessible to all users, including keyboard navigation support (space bar/enter key).</li>
+            <li>Customization: Supports text, images, and can be configured for various uses like vocabulary,, concepts, or flashcards.</li>
+            <li>DesignPLUS Integration: Part of the Design Tools for Canvas, allowing for easy creation without needing to know HTML.</li>
+            <li>Visual Organization: Enables instructors to organize content in a compact, engaging format. </li>
+        </ul>
+        <p>Usage in Canvas</p>
+        <ul>
+        <li>Functionality: Students can click on the cards to reveal the back side.</li>
+        <li>Formatting: Cards can be set to equal height for consistent, polished presentation.</li>
+        <li>Placement: Can be added to pages, assignments, or discussions within Canvas.</li> 
+        </ul>  
 
         The base flip cards template has been adapted so that 
         -- the code gives a row of three of them which has been the typical need. If you need to split out to singles just examine the code and break one out from the row and column portions of the code.
         -- The front of the cards has an added icon (question mark) to indicate interactivity and it is using the TSTC brand color, Texas Blue.
-        -->
+    </section>
+        <p>&nbsp;</p>
 
         <!-- BEGIN COPY-PASTE - THIS PORTION IS THE ACTUAL TEMPLATE. DO NOT CHANGE OR ADD TO THE TEMPLATE -->
-
-        <div class="dp-column-container container-fluid">
+    
+    <div class="dp-column-container container-fluid">
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both" aria-label="Flip Card" data-front="Front Card" data-back="Back Card">
@@ -107,11 +128,110 @@ Key Features and Benefits
     </div>
 </div>
 
+
+
         <!-- END COPY-PASTE -->
+</div>
+<p>&nbsp;</p>
+        
+<section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-code fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Code Snippet</h3>
+
+        <h4>Canvas Page Wrapper</h4>
+        <p>If you are pasting this into a page that already has work in it, you will likely already have a wrapper in place. If you are starting with an empty page, you will need to add this wrapper. Be sure to place your end div at the end of the code.</p>
+        
+            <pre><code style="background-color: #eee; border: 1px solid #999; display: block; padding: 5px;">
+&lt;div id=&quot;dp-wrapper&quot; class=&quot;dp-wrapper dp-flat-sections&quot;&gt;
+</code></pre>
+        
+        
+    <h4>Code Snippet</h4>
+    <p>This is the template code for this activity.</p>
+
+        
+        <pre>
+      <code style="background-color: #eee; border: 1px solid #999; display: block; padding: 5px;">
+  &lt;div class=&quot;dp-panels-wrapper dp-tabs-buttons-vertical dp-panel-active-color-dp-secondary dp-panel-color-dp-primary&quot;&gt;&lt;/div&gt;      
+    &lt;div class=&quot;dp-column-container container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4 col-sm-12&quot;&gt;
+            &lt;div class=&quot;dp-flip-card dp-flip-card-fast dp-flip-card-show-both&quot; aria-label=&quot;Flip Card&quot; data-front=&quot;Front Card&quot; data-back=&quot;Back Card&quot;&gt;
+                &lt;div class=&quot;dp-flip-card-inner&quot;&gt;
+                    &lt;div class=&quot;dp-front-card&quot;&gt;
+                        &lt;div class=&quot;dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block&quot;&gt;
+                            &lt;div class=&quot;card-body&quot;&gt;
+                                &lt;h4 class=&quot;card-title dp-ignore-theme dp-has-icon&quot;  style=&quot;text-align: center;&quot;&gt;&lt;i class=&quot;dp-icon fas fa-question-circle dp-i-size-large&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;dp-icon-content&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/i&gt;&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;Card 1: Front Card&lt;/h4&gt;
+                                &lt;p class=&quot;card-text&quot;&gt;Card 1: Front Body Text&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;div class=&quot;dp-back-card&quot;&gt;
+                    &lt;div class=&quot;dp-card card h-100&quot;&quot;&gt;
+                        &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h4 class=&quot;card-title dp-ignore-theme&quot;&gt;Card 1: Back Card&lt;/h4&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Card 1: Back Body Text&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-4 col-sm-12&quot;&gt;
+            &lt;div class=&quot;dp-flip-card dp-flip-card-fast dp-flip-card-show-both  mx-auto d-block&quot; aria-label=&quot;Flip Card&quot; data-front=&quot;Front Card&quot; data-back=&quot;Back Card&quot;&gt;
+                &lt;div class=&quot;dp-flip-card-inner&quot;&gt;
+                    &lt;div class=&quot;dp-front-card&quot;&gt;
+                        &lt;div class=&quot;dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block&quot;&quot;&gt;
+                            &lt;div class=&quot;card-body&quot;&gt;
+                                &lt;h4 class=&quot;card-title dp-ignore-theme dp-has-icon&quot;  style=&quot;text-align: center;&quot;&gt;&lt;i class=&quot;dp-icon fas fa-question-circle dp-i-size-large&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;dp-icon-content&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/i&gt;&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;Card 2: Front Card&lt;/h4&gt;
+                                &lt;p class=&quot;card-text&quot;&gt;Card 2: FrontBody Text&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+               
+                &lt;div class=&quot;dp-back-card&quot;&gt;
+                    &lt;div class=&quot;dp-card card h-100&quot;&gt;
+                        &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h4 class=&quot;card-title dp-ignore-theme&quot;&gt;Card 2: Back Card&lt;/h4&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Card 2: BackBody Text&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-4 col-sm-12&quot;&gt;
+            &lt;div class=&quot;dp-flip-card dp-flip-card-fast dp-flip-card-show-both&quot; aria-label=&quot;Flip Card&quot; data-front=&quot;Front Card&quot; data-back=&quot;Back Card&quot;&gt;
+                &lt;div class=&quot;dp-flip-card-inner&quot;&gt;
+                    &lt;div class=&quot;dp-front-card&quot;&gt;
+                        &lt;div class=&quot;dp-card card h-100 cp-bg-dp-primary dp-shadow-r2 mx-auto d-block&quot;&quot;&gt;
+                            &lt;div class=&quot;card-body&quot;&gt;
+                                &lt;h4 class=&quot;card-title dp-ignore-theme dp-has-icon&quot;  style=&quot;text-align: center;&quot;&gt;&lt;i class=&quot;dp-icon fas fa-question-circle dp-i-size-large&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;dp-icon-content&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/i&gt;&lt;strong&gt;&lt;br /&gt;&lt;/strong&gt;Card 3: Front Card&lt;/h4&gt;
+                                &lt;p class=&quot;card-text&quot;&gt;Card 3: Front Body Text&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+               
+                &lt;div class=&quot;dp-back-card&quot;&gt;
+                    &lt;div class=&quot;dp-card card h-100&quot;&gt;
+                        &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h4 class=&quot;card-title dp-ignore-theme&quot;&gt;Card 3: Back Card&lt;/h4&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Card 3: Back Body Text&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+      </code>
+   </pre>
+      </section>
+    <p>&nbsp;</p>
         
     </div>
 
     <script src="bootstrap.min.js"></script>
+    <!-- Canvas Complete JavaScript -->
+    <script src="../js/canvas-complete.js"></script>
     <script src="js/cidilabs-scripts.js"></script>
 </body>
 </html>

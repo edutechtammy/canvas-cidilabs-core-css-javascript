@@ -8,24 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap.min.css?v=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/cidilabs-activities.css?v=1.6">
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="css/canvas-complete.css">
 </head>
 <body>
-    <div class="container" style="max-width: 1200px; margin: 20px auto; padding: 20px;">
-        <a href="index.html" class="back-to-index">← Back to Index</a>
-        <h1>CidiLabs Order Items Test</h1>
-        <p>Testing the Order Items component locally before deploying to Canvas.</p>
+    
         
-        <!-- CidiLabs Order Items Template (DO NOT MODIFY STRUCTURE) -->
-        <!--   Based on the Cidi Labs DesignPLUS tools for Canvas, the Ordering Activity is an interactive element designed to boost student engagement and facilitate active learning directly within Canvas pages. 
-        Here is a description of the Cidi Labs Ordering Activity:
-        - Functionality: It allows instructors to create interactive, drag-and-drop activities where students must arrange items into a correct, specific order.
-        - Purpose: These activities are used to test knowledge, aid in memorization, or guide students through sequential processes, such as steps in a scientific method, historical timelines, or hierarchical structures.
-        - Accessibility & Implementation: These, like other DesignPLUS interactive elements, are designed to be accessible to all users. They are implemented via JavaScript within the Canvas Rich Content Editor (RCE).
-        - Part of DesignPLUS: The Ordering Activity is part of the broader suite of Design Tools (DesignPLUS) that allow instructors to add interactivity, such as accordion folders, tabs, and flashcards, without needing to write custom code. 
-        These tools are accessed via the "spaceship" icon in the Canvas content editor.    
-        - The default CidiLabs Order Items template has had styles added to bring in a TSTC theme look with Texas Blue background and red border around the order items.
-        -->
+        
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections">
+        <a href="index.html" class="back-to-index">← Back to Index</a>
+        <header class="dp-header dp-flat-sections">
+            <div class="dp-content-block kl_custom_block_1">
+                <p style="text-align: center;">GitHub: edutechtammy</p> 
+            </div>
+            <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Dev Tools</span></span> <span class="dp-header-title">Order Items Interactive Activity</span></h2>
+        </header>
+       
+        
+        <!--  The kl id is from Cidi Labs Design Plus. The lead class is from Bootstraps -->
+        <div id="kl_introduction">
+            <p  class="lead"> Based on the Cidi Labs DesignPLUS tools for Canvas, the Ordering Activity is an interactive element designed to boost student engagement and facilitate active learning directly within Canvas pages. </p>
+        </div>
+        <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Features</h3>
+
+<h4> Description of the Cidi Labs Ordering Activity:</h4>
+<ul>
+<li>Functionality: It allows instructors to create interactive, drag-and-drop activities where students must arrange items into a correct, specific order.</li>
+<li>Purpose: These activities are used to test knowledge, aid in memorization, or guide students through sequential processes, such as steps in a scientific method, historical timelines, or hierarchical structures.</li>
+</ul>
+</section>
+<p>&nbsp;</p>
+
+
+
+<!--  Beginning of copy paste   -->
+
+
         <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px;">
             <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
             <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order</p>
@@ -36,11 +59,34 @@
             </ol>
         </div>
         <p>&nbsp;</p>
+
+
         <!-- End CidiLabs Template -->
+
+        <p>&nbsp;</p>
+<figure>
+   <figcaption style="padding: 10px 20px 5px 20px; font-size: 10px">Order Items Template</figcaption>
+   <pre>
+      <code style="background-color: #eee; border: 1px solid #999; display: block; padding: 5px;">
+      &lt;div class=&quot;dp-order-wrapper&quot; style=&quot;background-color: #1d2757; padding: 20px; border-radius: 10px;&quot;&gt;
+            &lt;h4 class=&quot;dp-has-icon&quot; style=&quot;color: white;&quot;&gt;&lt;i class=&quot;fas fa-sort-numeric-down&quot;&gt;&lt;span class=&quot;dp-icon-content&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/i&gt; Order Items&lt;/h4&gt;
+            &lt;p style=&quot;color: white; border: none; outline: none; text-shadow: none; background: transparent;&quot;&gt;Arrange the following items in the correct order&lt;/p&gt;
+            &lt;ol class=&quot;dp-order dp-order-text&quot; style=&quot;background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 400px; margin: 0 auto;&quot;&gt;
+                &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;li&gt;Item 2&lt;/li&gt;
+                &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+      </code>
+   </pre>
+</figure>
 
     </div>
 
     <script src="bootstrap.min.js"></script>
+    <!-- Canvas Complete JavaScript -->
+    <script src="../js/canvas-complete.js"></script>
     <script src="js/cidilabs-scripts.js"></script>
 </body>
 </html>

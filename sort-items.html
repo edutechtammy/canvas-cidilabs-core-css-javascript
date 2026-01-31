@@ -7,29 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="css/cidilabs-activities.css?v=1.6">
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="css/canvas-complete.css">
 </head>
 <body>
-    <div class="container" style="max-width: 1200px; margin: 20px auto; padding: 20px;">
+        <div id="dp-wrapper" class="dp-wrapper dp-flat-sections">
         <a href="index.html" class="back-to-index">← Back to Index</a>
-        <h1>CidiLabs Sort Items Test</h1>
-        <p>Testing the Sort Items component locally before deploying to Canvas.</p>
+        <header class="dp-header dp-flat-sections">
+            <div class="dp-content-block kl_custom_block_1">
+                <p style="text-align: center;">GitHub: edutechtammy</p> 
+            </div>
+            <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Dev Tools</span></span> <span class="dp-header-title">Sort Items Interactive Activity</span></h2>
+        </header>
+       
         
-        <!--  The CidiLabs DesignPLUS Order Items tool (often referred to as Sort Items or Sorting Interactions) is an interactive, drag-and-drop activity designed for the Canvas Learning Management System. It allows instructors to create engaging, formative learning experiences that require students to arrange items in a specific, correct order. 
-        Key Features and Description:
-        -- Interactive Learning: Students physically drag and drop items to organize them, which encourages higher-order thinking and improves long-term retention of information.
-        -- Immediate Feedback: The tool provides instant feedback to students, allowing them to verify their understanding immediately.
-        -- Accessibility: As a DesignPLUS feature, these sorting interactions are designed to be accessible, ensuring they can be used by all students.
-        -- Easy Implementation: The tool is part of the DesignPLUS Sidebar (accessed via the "rocket ship" icon in the Canvas Rich Content Editor), allowing for quick creation without needing to write custom HTML or JavaScript.
-        -- Use Cases: It is ideal for sequencing historical events, organizing steps in a process, sorting data, or categorizing concepts. 
+        <!--  The kl id is from Cidi Labs Design Plus. The lead class is from Bootstraps -->
+        <div id="kl_introduction">
+            <p  class="lead">The CidiLabs DesignPLUS Order Items tool (often referred to as Sort Items or Sorting Interactions) is an interactive, drag-and-drop activity designed for the Canvas Learning Management System. It allows instructors to create engaging, formative learning experiences that require students to arrange items in a specific, correct order.</p>
+        </div>
+        <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Features</h3>
 
-        This tool is part of a broader set of DesignPLUS interactive elements that help reduce cognitive load and increase engagement in online courses. 
+<h4>Key Features</h4>
+<ul>
+<li>Interactive Learning: Students physically drag and drop items to organize them, which encourages higher-order thinking and improves long-term retention of information.</li>
+<li>Immediate Feedback: The tool provides instant feedback to students, allowing them to verify their understanding immediately.</li>
+<li>Accessibility: As a DesignPLUS feature, these sorting interactions are designed to be accessible, ensuring they can be used by all students.</li>
+<li>Easy Implementation: The tool is part of the DesignPLUS Sidebar (accessed via the "rocket ship" icon in the Canvas Rich Content Editor), allowing for quick creation without needing to write custom HTML or JavaScript.</li>
+<li>Use Cases: It is ideal for sequencing historical events, organizing steps in a process, sorting data, or categorizing concepts.</li>
+</ul>
+</section>
+<p>&nbsp;</p>
 
-        Custom styling has been added to the default template to align with TSTC branding, including a Texas Blue background and red borders around the sortable items.
-
-        -->
 
         <!-- BEGIN COPY-PASTE - THIS PORTION IS THE ACTUAL TEMPLATE -->
         
@@ -75,10 +88,61 @@
     <p>&nbsp;</p>
 
         <!-- END COPY-PASTE -->
+
+        <p>&nbsp;</p>
+<figure>
+   <figcaption style="padding: 10px 20px 5px 20px; font-size: 10px">Sort Items Template</figcaption>
+   <pre>
+      <code style="background-color: #eee; border: 1px solid #999; display: block; padding: 5px;">
+      &lt;div class=&quot;dp-si-sort-pool dp-si-sort-type-text&quot; style=&quot;background-color: #1d2757; padding: 20px; border-radius: 10px;&quot;&gt;
+        &lt;h4 class=&quot;dp-has-icon&quot; style=&quot;color: white;&quot;&gt;&lt;i class=&quot;fas fa-exchange-alt&quot;&gt;&lt;span class=&quot;dp-icon-content&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/i&gt; Sort Items&lt;/h4&gt;
+        &lt;p style=&quot;color: white; border: none; background: transparent;&quot;&gt;Sort the following items into their correct categories.&lt;/p&gt;
+        &lt;div class=&quot;dp-si-sort-content&quot;&gt;
+            &lt;div class=&quot;dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text&quot; style=&quot;border: 2px solid #d13138; border-radius: 10px; padding: 15px;&quot;&gt;
+                &lt;div class=&quot;dp-si-sort-bucket-content&quot;&gt;
+                    &lt;h4 class=&quot;dp-si-sort-bucket-header&quot;&gt;Answer Bank&lt;/h4&gt;
+                    &lt;div class=&quot;dp-action-item dp-action-item-block dp-action-item-instructions&quot; style=&quot;display: none;&quot; aria-hidden=&quot;true&quot;&gt;
+                        &lt;p&gt;Add the correct items to their buckets and any distractors to this bucket. All items will move to this bucket to start for students.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;dp-si-item-text&quot;&gt;Distractor&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;container-fluid pt-3 px-0&quot;&gt;
+                &lt;div class=&quot;row gy-3&quot;&gt;
+                    &lt;div class=&quot;dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6&quot; style=&quot;border: 2px solid #d13138; border-radius: 10px; padding: 15px;&quot;&gt;
+                        &lt;div class=&quot;dp-si-sort-bucket-content&quot;&gt;
+                            &lt;h4 class=&quot;dp-si-sort-bucket-header&quot;&gt;Bucket 1&lt;/h4&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;dp-si-item-text&quot;&gt;Item 1.1&lt;/li&gt;
+                                &lt;li class=&quot;dp-si-item-text&quot;&gt;Item 1.2&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6&quot; style=&quot;border: 2px solid #d13138; border-radius: 10px; padding: 15px;&quot;&gt;
+                        &lt;div class=&quot;dp-si-sort-bucket-content&quot;&gt;
+                            &lt;h4 class=&quot;dp-si-sort-bucket-header&quot;&gt;Bucket 2&lt;/h4&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;dp-si-item-text&quot;&gt;Item 2.1&lt;/li&gt;
+                                &lt;li class=&quot;dp-si-item-text&quot;&gt;Item 2.2&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+      </code>
+   </pre>
+</figure>
         
     </div> <!-- End of the main container -->
 
     <script src="bootstrap.min.js"></script>
+    <!-- Canvas Complete JavaScript -->
+    <script src="../js/canvas-complete.js"></script>
     <script src="js/cidilabs-scripts.js"></script>
 </body>
 </html>
